@@ -2,6 +2,6 @@
 BarIQ Application
 
 Danny's Commit<br>
-Nick's Commit
-Dom's Commit
-Alek's Kaluza
+Nick's Commit<br>
+Dom's Commit<br>
+Alek's Kaluza<br>
