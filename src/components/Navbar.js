@@ -6,7 +6,7 @@ export default function Navbar() {
         display: 'flex',
         margin: '0px 0px',
         padding: '13px 40px',
-        font: 'Roboto',
+        fontFamily: 'Roboto',
         alignContent: "center"
     }
     const navPagesStyles = {
@@ -20,18 +20,19 @@ export default function Navbar() {
         borderRadius: "10px",
         height: '50px',
         width: '100px',
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        fontFamily: "Roboto"
 
     }
     return (
         <div>
             <nav className="navbar" style={navbarStyles}>
-                <h2>BarIQ</h2>
+                <h2 style={navbarStyles}>Bar IQ</h2>
                 <nav style={navbarStyles} >
-                    <p style={navbarStyles}>Home</p>
-                    <p style={navbarStyles}>Layout</p>
-                    <p style={navbarStyles}>ROI</p>
-                    <p style={navbarStyles}>Help</p>
+                    <p style={navPagesStyles}>Home</p>
+                    <p style={navPagesStyles}>Layout</p>
+                    <p style={navPagesStyles}>ROI</p>
+                    <p style={navPagesStyles}>Help</p>
                 </nav>
                 <button style={buttonStyles}>Buy Now</button>
             </nav>

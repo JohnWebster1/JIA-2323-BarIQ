@@ -4,7 +4,9 @@ export default function RoiContent() {
     const RoiContentStyles = {
         display: 'block',
         maxWidth: "400px",
-        color: 'var(--color-text)'
+        color: 'var(--color-text)',
+        marginTop: "185px",
+        fontFamily: 'Roboto'
     }
     const paragraphStyles = {
 
