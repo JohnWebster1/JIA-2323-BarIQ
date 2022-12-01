@@ -8,10 +8,13 @@ import RoiContent from "./components/RoiContent"
 
 function App(props) {
     const RoiWindowStyles = {
-        display:"flex"
+        display:"flex",
+        alignItems: "center",
+        justifyContent: "space-evenly",
+        font: "Roboto"
     }
     return (
-        <div className="app-window">
+        <div className="app-window" style={{width:'100%'}}>
             <Navbar />
             <nav style={RoiWindowStyles}>
                 <RoiForm/>
