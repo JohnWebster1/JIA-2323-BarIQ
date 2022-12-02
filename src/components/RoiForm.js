@@ -76,8 +76,8 @@ export default function RoiForm() {
         <RoiField label={labels[3]} value={value3} onChange={handleChange3}/>
         <RoiField label={labels[4]} value={value4} onChange={handleChange4}/>
         <CalculateButton onClick={calculate} style={{background: '#0d1a53', borderRadius : 25}}>Calculate ROI</CalculateButton>
-        <RoiText visible={roiVisible}>ROI of Bar IQ Technologies Year 1: ${roi1}</RoiText>
-        <RoiText visible={roiVisible}>ROI of Bar IQ Technologies Year 2: ${roi2}</RoiText>
+        <RoiText visible={roiVisible}>Profit after Bar IQ Technologies Year 1: ${roi1}</RoiText>
+        <RoiText visible={roiVisible}>Profit after Bar IQ Technologies Year 2: ${roi2}</RoiText>
     </div>
   )
 }
