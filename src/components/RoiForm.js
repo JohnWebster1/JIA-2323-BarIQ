@@ -25,21 +25,21 @@ export default function RoiForm() {
     };
 
     const labels = [
-        "Percentage of Beer Mispicks (0 - 1.0)",
+        "Percentage of Beer Mispicks (0 - 100)",
         "Number of Warehouse Workers",
         "Number of Interactive Forklifts",
         "Warehouse Size (square feet)"
     ];
 
     const calculate = () => {
-        const mispicks = value0 - 0.5
-        if (mispicks < 0.02) {
-            mispicks = 0.02
+        const mispicks = value0 - 5
+        if (mispicks < 2) {
+            mispicks = 2
         }
         const forklift_cost = (((value3 / 5000) + 1) - value2) * 40000
         const worker_cost = (value1 * 300000)
         const worker_saved = worker_cost * 0.25
-        const mispicks_saved = (value0 - mispicks) * 125000
+        const mispicks_saved = ((value0 - mispicks) / 100) * 125000
         
         const roi = 1000000 + worker_saved - forklift_cost + mispicks_saved;
         setRoi(roi);
