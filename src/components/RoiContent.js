@@ -51,7 +51,6 @@ export default function RoiContent() {
           <ContentBullet title={bullets[2].title} description={bullets[2].description}/>
           <ContentBullet title={bullets[3].title} description={bullets[3].description}/>
         </nav>
-  
     </div>
   )
 }
