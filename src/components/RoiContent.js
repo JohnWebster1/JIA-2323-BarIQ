@@ -16,20 +16,20 @@ export default function RoiContent() {
 
     const bullets = [
       {
+        title: "Beer Mispicks",
+        description: "The amount of beer pallets that is being distributed incorrectly by warehouses."
+      },
+      {
+        title: "Warehouse Workers",
+        description: "RFID Automation serves to help save costs on warehouse workers."
+      },
+      {
+        title: "Forklifts",
+        description: "Gives a description of the number of forklifts needed for the implementation and efficient use of RFID technology."
+      },
+      {
         title: "Warehouse Size",
-        description: "We consider your warehouse size to see exactly how efficient our proposed solution will be for your warehouse."
-      },
-      {
-        title: "RFID Purchase",
-        description: "The RFID purchase is the bulk of your investment. Its integration is what will improve warehouse efficiency."
-      },
-      {
-        title: "Profits",
-        description: "Your current company profits are an important thing for us to consider. If your company has profits, we can look to reinvest them to purchase our services."
-      },
-      {
-        title: "Expenses",
-        description: "Providing us with your current expenses allows us to see if your investment will lower your expenses after RFID integration."
+        description: "Describes to us how many workers and forklifts need to be allocated in warehouses."
       }
     ]
 
@@ -41,8 +41,8 @@ export default function RoiContent() {
   return (
     <div style={RoiContentStyles}>
         <h2>Our Custom ROI Calulator</h2>
-        <p style={paragraphStyles}>Our ROI calculator uses a variety of factors to determine your estimated ROI by becoming a BarIQ customer!  It will consider your current expenses, profits, and warehouse size.</p>
-        <p style={paragraphStyles}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+        <p style={paragraphStyles}>Our ROI calculator uses a variety of factors to determine your estimated ROI by becoming a BarIQ customer!</p>
+        <p style={paragraphStyles}>Our ROI calculator takes into account 30 different ROI indicators specific to the beer warehousing industry. These indicators directly show you what the implementation of RFID technology can do for your beer warehouse. Additionally we offer a 3 year outlook that will describe the continuous ROI as you continue using our RFID technologies.</p>
         <nav style={bulletGroupStyles}>
           <ContentBullet title={bullets[0].title} description={bullets[0].description}/>
           <ContentBullet title={bullets[1].title} description={bullets[1].description}/>
