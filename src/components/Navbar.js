@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Navbar.css"
+
 export default function Navbar() {
     const navbarStyles = {
         color: "#0d1a53", 
@@ -8,7 +8,8 @@ export default function Navbar() {
         padding: '0px 0px',
         fontFamily: 'Roboto',
         alignContent: "center",
-        justifyContent: "space-evenly"
+        justifyContent: "space-evenly",
+        width: '100%'
     }
     const navLogoStyles = {
         display: 'flex',
@@ -23,11 +24,11 @@ export default function Navbar() {
     const navPagesStyles = {
         display: 'flex',
         margin: "20px 20px",
-        color: "#0d1a53",
+        color: "#505F98",
         padding: "10px 10px",
         fontFamily: "sans-serif",
         alignItems: "center",
-        fontSize: "20px"
+        fontSize: "20px",
     }
     const buttonStyles = {
         background: "#0d1a53",
@@ -40,7 +41,7 @@ export default function Navbar() {
 
     }
     return (
-        <div className='nav-container'>
+        <div className='nav-container' style={{width: '100%'}}>
             <nav className="navbar" style={navbarStyles}>
                 <h2 style={navLogoStyles}>Bar IQ</h2>
                 <nav style={navPagesStyles} >

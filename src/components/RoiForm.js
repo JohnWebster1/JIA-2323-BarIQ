@@ -47,7 +47,7 @@ export default function RoiForm() {
     }
   return (
     <div style={RoiFormStyles}>
-        <Header>ROI Calculator</Header>
+        <Header style={{margin:"30px", padding:"7px", color:"#0d1a53"}}>ROI Calculator</Header>
         <RoiField label={labels[0]} value={value0} onChange={handleChange0}/>
         <RoiField label={labels[1]} value={value1} onChange={handleChange1}/>
         <RoiField label={labels[2]} value={value2} onChange={handleChange2}/>

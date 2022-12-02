@@ -1,5 +1,5 @@
 import React from 'react'
-import contentBullet from "./contentBullet"
+import ContentBullet from "./contentBullet"
 
 export default function RoiContent() {
     const RoiContentStyles = {
@@ -11,7 +11,7 @@ export default function RoiContent() {
         fontFamily: 'sans-serif'
     }
     const paragraphStyles = {
-
+        color: "#6F7CB2"
     }
 
     const bullets = [
@@ -33,20 +33,25 @@ export default function RoiContent() {
       }
     ]
 
+    const bulletGroupStyles = {
+      display: "flex",
+      padding: "20px 0px"
+    }
+
   return (
     <div style={RoiContentStyles}>
         <h2>Our Custom ROI Calulator</h2>
         <p style={paragraphStyles}>Our ROI calculator uses a variety of factors to determine your estimated ROI by becoming a BarIQ customer!  It will consider your current expenses, profits, and warehouse size.</p>
         <p style={paragraphStyles}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-        <nav>
-          <contentBullet title={bullets[0].title} description={bullets[0].description}/>
-          <contentBullet title={bullets[1].title} description={bullets[1].description}/>
+        <nav style={bulletGroupStyles}>
+          <ContentBullet title={bullets[0].title} description={bullets[0].description}/>
+          <ContentBullet title={bullets[1].title} description={bullets[1].description}/>
         </nav>
-        <nav>
-          <contentBullet title={bullets[2].title} description={bullets[2].description}/>
-          <contentBullet title={bullets[3].title} description={bullets[3].description}/>
+        <nav style={bulletGroupStyles}>
+          <ContentBullet title={bullets[2].title} description={bullets[2].description}/>
+          <ContentBullet title={bullets[3].title} description={bullets[3].description}/>
         </nav>
-        
+  
     </div>
   )
 }
