@@ -42,8 +42,8 @@ export default function RoiForm() {
     const [roiVisible, setRoiVisible] = useState(false);
 
     const RoiFormStyles = {
-        padding: "100px",
-        margin: "0px"
+        padding: "30px 30px",
+        margin: "30px 30px"
     }
   return (
     <div style={RoiFormStyles}>
@@ -52,7 +52,7 @@ export default function RoiForm() {
         <RoiField label={labels[1]} value={value1} onChange={handleChange1}/>
         <RoiField label={labels[2]} value={value2} onChange={handleChange2}/>
         <RoiField label={labels[3]} value={value3} onChange={handleChange3}/>
-        <CalculateButton onClick={calculate}>Calculate ROI</CalculateButton>
+        <CalculateButton onClick={calculate} style={{background: '#0d1a53', borderRadius : 25}}>Calculate ROI</CalculateButton>
         <RoiText visible={roiVisible}>Your ROI per year is: ${roi}</RoiText>
     </div>
   )
