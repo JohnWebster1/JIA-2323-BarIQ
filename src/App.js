@@ -11,7 +11,7 @@ function App(props) {
         display:"flex",
         alignItems: "center",
         justifyContent: "space-evenly",
-        font: "Roboto"
+        font: "sans-serif"
     }
     return (
         <div className="app-window" style={{width:'100%'}}>
