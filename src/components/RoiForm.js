@@ -25,15 +25,23 @@ export default function RoiForm() {
     };
 
     const labels = [
-        "Profits (dollars)",
-        "Expenses (dollars)",
-        "Warehouse Size (square feet)",
-        "RFID Investment (dollars)"
+        "Percentage of Beer Mispicks (0 - 100)",
+        "Number of Warehouse Workers",
+        "Number of Interactive Forklifts",
+        "Warehouse Size (square feet)"
     ];
 
     const calculate = () => {
-        const first = Math.abs(value0 - value1);
-        const roi = first * (value3 / 10000);
+        const mispicks = value0 - 5
+        if (mispicks < 2) {
+            mispicks = 2
+        }
+        const forklift_cost = (((value3 / 5000) + 1) - value2) * 40000
+        const worker_cost = (value1 * 300000)
+        const worker_saved = worker_cost * 0.25
+        const mispicks_saved = ((value0 - mispicks) / 100) * 125000
+        
+        const roi = 1000000 + worker_saved - forklift_cost + mispicks_saved;
         setRoi(roi);
         setRoiVisible(true);
     }
@@ -53,7 +61,7 @@ export default function RoiForm() {
         <RoiField label={labels[2]} value={value2} onChange={handleChange2}/>
         <RoiField label={labels[3]} value={value3} onChange={handleChange3}/>
         <CalculateButton onClick={calculate} style={{background: '#0d1a53', borderRadius : 25}}>Calculate ROI</CalculateButton>
-        <RoiText visible={roiVisible}>Your ROI per year is: ${roi}</RoiText>
+        <RoiText visible={roiVisible}>ROI of Bar IQ technologies: ${roi}</RoiText>
     </div>
   )
 }
