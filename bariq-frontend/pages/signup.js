@@ -6,20 +6,20 @@ export default function Home() {
     return (
         <div>
             <Head>
-                <title>Bar IQ | Log In</title>
+                <title>Bar IQ | Sign Up</title>
                 <meta name="description" content="Bar IQ is a warehouse management software for beer warehouses."/>
                 <link rel="icon" href="../public/favicon.ico"/>
             </Head>
 
             <LeftSection/>
             <RightSection
-                href={"/signup"}
-                topText={"Don't have an account?"}
-                topButtonText={"Sign Up"}
-                headerText={"Welcome back to BarIQ!"}
-                headerSubText={"Fill in your credentials to log in."}
-                useName={false}
-                buttonText={"Log In"}
+                href={"/login"}
+                topText={"Already have an account?"}
+                topButtonText={"Log In"}
+                headerText={"Welcome to BarIQ!"}
+                headerSubText={"Get started by creating an account."}
+                useName={true}
+                buttonText={"Sign Up"}
             />
         </div>
     )
