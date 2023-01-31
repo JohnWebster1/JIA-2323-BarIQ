@@ -7,8 +7,8 @@ Information about what your project is about
 ### Version 0.1.0
 
 #### New Features
-* The BarIQ Web Portal now has a login screen with built in authentication
-* The BarIQ Navigation Bar is up to date with up to date pages
+* The BarIQ Web Portal now has a login screen with built in authentication so customers can save their account information and personalize their BarIQ experience
+* The BarIQ Navigation Bar is up to date with ROI, Layout Builder, and FAQ pages 
 
 #### Bug Fixes
 
@@ -16,8 +16,8 @@ Information about what your project is about
 
 ### Version 0.2.0: next release
 #### New Features
-* Feature 1
-* feature 2...
+* TBD
+* TBD
 
 #### Bug Fixes
 N/A
