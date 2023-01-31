@@ -1,5 +1,8 @@
-Team 2323 BarIQ
-Information about what your project is about
+## Team 2323 BarIQ
+
+Team 2323 is tasked with creating an Interactive Resource Portal for new and existing customers using BarIQ technologies. Specifically, we are looking to make an interactive layout builder that implements RFID technology into beer warehouses, an ROI calculator for beer wraehouse clients, and a FAQ page for users of the Interactive Resource Portal.
+
+We are working with Daniel Knotts, CTO of BarIQ. 
 
 [Licences under GNUv3 ](LICENSE.md)
 
