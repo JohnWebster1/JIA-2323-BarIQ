@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 const SwitchTextWrapper = styled.div`
   position: absolute;
@@ -106,16 +105,14 @@ function RightSection(props) {
 
                 {props.useName ? (<>
                     <SectionHeader>Name</SectionHeader>
-                    <Input type="text"/>
+                    <Input type="text" value={props.name} onChange={props.setName}/>
                 </>) : (<> </>)}
 
                 <SectionHeader>Email</SectionHeader>
-                <Input type="text"/>
+                <Input type="text" value={props.email} onChange={props.setEmail}/>
                 <SectionHeader>Password</SectionHeader>
-                <Input type="text"/>
-                <FinalButton onClick={() => {
-                    console.log("clicked");
-                }}>{props.buttonText}</FinalButton>
+                <Input type="password" id={"passwordInput"} value={props.password} onChange={props.setPassword}/>
+                <FinalButton onClick={props.onClick}>{props.buttonText}</FinalButton>
             </Right>
         </>
     );

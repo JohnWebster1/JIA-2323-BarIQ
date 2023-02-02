@@ -22,6 +22,7 @@ const Atag = styled.a`
   padding: 7px 13px;
   border-radius: 100px;
   transition: .5s;
+  cursor: pointer;
 
   &:hover {
     background: #2a81e5;
@@ -43,13 +44,14 @@ const AtagSignup = styled.a`
   }
 `;
 
-function Navbar() {
+function Navbar(props) {
     return (
         <Nav>
             <List>
                 <ListItem><Atag className="active" href="/">Home</Atag></ListItem>
-                <ListItem><Atag href="/login">Log In</Atag></ListItem>
-                <ListItem><AtagSignup href="/signup">Sign Up</AtagSignup></ListItem>
+                {props.loggedIn ? <></> : <ListItem><Atag href="/login">Log In</Atag></ListItem>}
+                {props.loggedIn ? <></> : <ListItem><AtagSignup href="/signup">Sign Up</AtagSignup></ListItem>}
+                {props.loggedIn ? <ListItem><Atag onClick={props.logout}>Log Out</Atag></ListItem> : <></>}
             </List>
         </Nav>
     );
