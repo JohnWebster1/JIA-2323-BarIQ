@@ -101,7 +101,7 @@ function RightSection(props) {
             </SwitchTextWrapper>
             <Right>
                 <Header>Welcome to BarIQ!</Header>
-                <Subtext>Get started by creating an account.</Subtext>
+                <Subtext>{props.headerSubText}</Subtext>
 
                 {props.useName ? (<>
                     <SectionHeader>Name</SectionHeader>
