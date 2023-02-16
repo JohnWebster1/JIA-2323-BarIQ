@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 const SwitchTextWrapper = styled.div`
   position: absolute;
@@ -100,9 +101,38 @@ const FinalButton = styled.a`
   }
 `;
 
+// Only used on mobile view
+const LogoWrapper = styled.div`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 12%;
+    height: 10%;
+    margin: 0 35px;
+    
+  }
+`;
+
 function RightSection(props) {
     return (
         <>
+            <LogoWrapper>
+                <a
+                    href="/"
+                >
+                    <Image
+                        src={"/../public/logo.png"}
+                        alt="Picture of the logo"
+                        layout="fill"
+                        objectFit="contain"
+                    />
+                </a>
+            </LogoWrapper>
             <SwitchTextWrapper>
                 <SwitchSubtext>{props.topText}</SwitchSubtext>
                 <SwitchButton href={props.href}>{props.topButtonText}</SwitchButton>
