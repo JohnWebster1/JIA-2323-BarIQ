@@ -26,12 +26,18 @@ const LogoWrapper = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   width: 55%;
-  height: 100%;
+  height: 50%;
+`;
+
+const Wrapper = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 function LeftSection() {
     return (
-        <>
+        <Wrapper>
             <LogoWrapper>
                 <a
                     href="/"
@@ -54,7 +60,7 @@ function LeftSection() {
                     />
                 </ImageWrapper>
             </Left>
-        </>
+        </Wrapper>
     );
 }
 

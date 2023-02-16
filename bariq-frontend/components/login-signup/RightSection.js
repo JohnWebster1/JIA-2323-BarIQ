@@ -55,6 +55,10 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-left: 10%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Input = styled.input`
@@ -69,6 +73,10 @@ const Input = styled.input`
   border-style: solid;
   border-width: 1px;
   transition: 0.2s;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const FinalButton = styled.a`
