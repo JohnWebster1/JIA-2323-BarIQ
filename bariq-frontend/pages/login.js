@@ -6,7 +6,7 @@ import {initFirebase} from "../util/firebaseApp";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {useRouter} from "next/router";
 
-export default function Home() {
+export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter()

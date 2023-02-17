@@ -6,7 +6,7 @@ import {createUserWithEmailAndPassword, getAuth, updateProfile} from "firebase/a
 import {initFirebase} from "../util/firebaseApp";
 import {useRouter} from "next/router";
 
-export default function Home() {
+export default function Signup() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
