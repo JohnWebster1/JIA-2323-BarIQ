@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import * as FaIcons from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 
 const Nav = styled.nav`
   background: #0070F3;
@@ -46,8 +49,9 @@ const AtagSignup = styled.a`
 
 function Navbar(props) {
     return (
-        <Nav>
+         <Nav>
             <List>
+                {props.loggedIn ? <ListItem><Link>Menu</Link></ListItem> : <></>}
                 <ListItem><Atag className="active" href="/">Home</Atag></ListItem>
                 {props.loggedIn ? <></> : <ListItem><Atag href="/login">Log In</Atag></ListItem>}
                 {props.loggedIn ? <></> : <ListItem><AtagSignup href="/signup">Sign Up</AtagSignup></ListItem>}
