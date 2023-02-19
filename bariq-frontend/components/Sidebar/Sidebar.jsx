@@ -1,14 +1,35 @@
-import React, { useState, useMemo} from 'react'
-import classNames from 'classnames'
-import { ArticleIcon, CollapsIcon, HomeIcon, LogoIcon, UsersIcon, VideosIcon, LogoutIcon } from '../sidebar-icons';
+import React, { useState, useMemo } from "react";
+import classNames from "classnames";
+import {
+  ArticleIcon,
+  CollapsIcon,
+  HomeIcon,
+  LogoIcon,
+  UsersIcon,
+  VideosIcon,
+  LogoutIcon,
+} from "../sidebar-icons";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 const menuItems = [
-  { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "Search Engine", icon: ArticleIcon, link: "/help" },
-  { id: 3, label: "Support", icon: UsersIcon, link: "/help" },
-  { id: 4, label: "Modules", icon: VideosIcon, link: "/help" },
+  { id: 1, label: "Home/Dashboard", icon: HomeIcon, link: "/" },
+  { id: 2, label: "FAQs", icon: ArticleIcon, link: "/help" },
+  { id: 3, label: "RFID Search Engine", icon: ArticleIcon, link: "/help" },
+  { id: 4, label: "Video Modules", icon: VideosIcon, link: "/help" },
+  { id: 5, label: "Floor Plan Generator", icon: HomeIcon, link: "/help" },
+  { id: 6, label: "Community", icon: UsersIcon, link: "/help" },
+  { id: 7, label: "ROI Calculator", icon: ArticleIcon, link: "/help" },
+  { id: 8, label: "Chat", icon: UsersIcon, link: "/help" },
+  { id: 9, label: "Equipment Supplier Map", icon: ArticleIcon, link: "/help" },
+  { id: 10, label: "Project Status Tool", icon: ArticleIcon, link: "/help" },
+  { id: 11, label: "My IoT", icon: UsersIcon, link: "/help" },
+  { id: 12, label: "Documents", icon: ArticleIcon, link: "/help" },
+  { id: 13, label: "Machine Vision", icon: VideosIcon, link: "/help" },
+  { id: 14, label: "Support Desk", icon: UsersIcon, link: "/help" },
+  { id: 15, label: "Equipment Log", icon: ArticleIcon, link: "/help" },
+  { id: 16, label: "Billing", icon: ArticleIcon, link: "/help" },
+  { id: 17, label: "E-store", icon: VideosIcon, link: "/help" },
 ];
 
 const Sidebar = () => {
@@ -63,16 +84,16 @@ const Sidebar = () => {
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">
-          <div className="flex items-center pl-1 gap-4">
-            <LogoIcon />
-            <span
-              className={classNames("mt-2 text-lg font-medium text-text", {
-                hidden: toggleCollapse,
-              })}
-            >
-              Bar IQ
-            </span>
+          <div className="flex-none w-12 h-12 items-center pl-1">
+            {(!toggleCollapse || !isCollapsible) && <LogoIcon />}
           </div>
+          <span
+            className={classNames("ml-2 text-lg font-medium text-text grow", {
+              hidden: toggleCollapse,
+            })}
+          >
+            Bar IQ
+          </span>
           {isCollapsible && (
             <button
               className={collapseIconClasses}
@@ -83,13 +104,13 @@ const Sidebar = () => {
           )}
         </div>
 
-        <div className="flex flex-col items-start mt-24">
+        <div className="flex flex-col items-start mt-8">
           {menuItems.map(({ icon: Icon, ...menu }) => {
             const classes = getNavItemClasses(menu);
             return (
               <div className={classes}>
                 <Link href={menu.link} legacyBehavior>
-                  <a className="flex py-4 px-3 items-center w-full h-full">
+                  <a className="flex py-4 px-3 items-center w-full h-full ">
                     <div style={{ width: "2.5rem" }}>
                       <Icon />
                     </div>
@@ -108,17 +129,6 @@ const Sidebar = () => {
             );
           })}
         </div>
-      </div>
-
-      <div className={`${getNavItemClasses({})} px-3 py-4`}>
-        <div style={{ width: "2.5rem" }}>
-          <LogoutIcon />
-        </div>
-        {!toggleCollapse && (
-          <span className={classNames("text-md font-medium text-text-light")}>
-            Logout
-          </span>
-        )}
       </div>
     </div>
   );
