@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar";
 import Centered from "../../components/Centered";
 import {useEffect, useState} from "react";
 import { useRouter } from 'next/router';
-import Article from "../../components/Article";
+import Article from "../../components/Articles/Article";
 
 export default function Index() {
     // Authentication

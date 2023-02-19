@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {secondsToStringDate} from "../util/format";
+import {secondsToStringDate} from "../../util/format";
 
 const ArticleList = styled.ul`
   list-style-type: none;
