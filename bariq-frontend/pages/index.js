@@ -5,6 +5,8 @@ import {useAuthState} from "react-firebase-hooks/auth";
 import {initFirebase} from "../util/firebaseApp";
 import {getAuth} from "firebase/auth";
 import {useRouter} from "next/router";
+import Sidebar from '../components/Sidebar/Sidebar.jsx';
+import Layout from '../components/Sidebar/Layout';
 
 export default function Home() {
     initFirebase()
@@ -32,10 +34,8 @@ export default function Home() {
             </Head>
 
             <Navbar loggedIn={user} logout={logout}/>
-
-            <Centered>
-                <h1>Home page (todo)</h1>
-                {user ? <h1>Welcome {user.displayName} </h1>: <></>}
-            </Centered>
+            
+            {/* Make all changes to the UI here */}
+            <Layout loggedIn={user}/>
         </div>)
 }
