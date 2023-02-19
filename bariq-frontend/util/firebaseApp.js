@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyA5kXmV_hfCASdfPn9bT0Ww7CKlyrUOUy8",
@@ -13,4 +14,9 @@ export const app = initializeApp(firebaseConfig);
 
 export const initFirebase = () => {
     return app;
+}
+
+// Using this package to help queries: https://react-query-firebase.invertase.dev/firestore
+export const initFirestore = () => {
+    return getFirestore(app);
 }

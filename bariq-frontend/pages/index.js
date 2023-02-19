@@ -7,6 +7,8 @@ import {getAuth} from "firebase/auth";
 import {useRouter} from "next/router";
 // import { Route, Router } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Sidebar from '../components/Sidebar/Sidebar.jsx';
+import Layout from '../components/Sidebar/Layout';
 
 export default function Home() {
     initFirebase()
@@ -33,11 +35,9 @@ export default function Home() {
                 <link rel="icon" href="../public/favicon.ico"/>
             </Head>
             <Navbar loggedIn={user} logout={logout}/>
-                
-            <Centered>
-                <h1>Home page (todo)</h1>
-                {user ? <h1>Welcome {user.displayName} </h1>: <></>}
-            </Centered>
             
+            
+            {/* Make all changes to the UI here */}
+            <Layout loggedIn={user}/>
         </div>)
 }

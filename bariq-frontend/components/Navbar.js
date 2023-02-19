@@ -56,6 +56,7 @@ function Navbar(props) {
                 {props.loggedIn ? <></> : <ListItem><Atag href="/login">Log In</Atag></ListItem>}
                 {props.loggedIn ? <></> : <ListItem><AtagSignup href="/signup">Sign Up</AtagSignup></ListItem>}
                 {props.loggedIn ? <ListItem><Atag onClick={props.logout}>Log Out</Atag></ListItem> : <></>}
+                <ListItem><Atag className="active" href="/help">Help</Atag></ListItem>
             </List>
         </Nav>
     );
