@@ -8,7 +8,7 @@ const Nav = styled.nav`
 
 const List = styled.ul`
   float: right;
-  margin-right: 20px;
+  margin: 12px 20px 0 0;
 `;
 
 const ListItem = styled.li`

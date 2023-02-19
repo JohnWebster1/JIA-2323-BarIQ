@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {secondsToStringDate} from "../util/format";
+import {secondsToStringDate} from "../../util/format";
 
 const ArticleWrapper = styled.div`
   max-width: 800px;
