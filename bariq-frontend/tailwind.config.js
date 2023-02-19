@@ -14,6 +14,7 @@ module.exports = {
       ...defaultTheme.colors,
       primary: '#3B81F6',
       white: '#FFFFFF',
+      secondary: '#F1F2F7	',
       text: {
         DEFAULT: "#1F2937",
         light: "#6C7281",
