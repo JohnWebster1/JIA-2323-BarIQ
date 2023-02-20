@@ -12,6 +12,24 @@ import SearchBar from "../../components/Articles/SearchBar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import styled from "styled-components";
 
+const Container = styled.div`
+  background: #e7edf2;
+  width: 100%;
+`;
+const Title = styled.h1`
+  background: #e7edf2;
+  text-align: center;
+  font-size: 20px;
+  height: 60px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+`;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export default function Index() {
   // Navigation
   const router = useRouter();
@@ -33,20 +51,6 @@ export default function Index() {
     });
   }, []);
 
-  const Container = styled.div`
-    background: #e7edf2;
-    width: 100%;
-  `;
-  const Title = styled.h1`
-    background: #e7edf2;
-    text-align: center;
-    font-size: 20px;
-    height: 60px;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  `;
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -60,20 +64,21 @@ export default function Index() {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Bar IQ | Help</title>
         <meta name="description" content="The help page for Bar IQ." />
         <link rel="icon" href="../public/favicon.ico" />
       </Head>
 
-      <div className="h-screen flex flex-row justify-start">
+      <Wrapper>
         <Sidebar />
         <Container>
           <Navbar loggedIn={user} logout={logout} />
           <Centered>
             <Title>RFID Search Engine</Title>
             <SearchBar
+              key="searchbar"
               onChange={(e) => {
                 const input = e.target.value.trim().toLowerCase();
                 const tempData = new Map();
@@ -99,7 +104,7 @@ export default function Index() {
             {articlesComponent}
           </Centered>
         </Container>
-      </div>
-    </div>
+      </Wrapper>
+    </>
   );
 }
