@@ -34,12 +34,14 @@ const Layout = (props) => {
       <Sidebar />
       <div className="bg-primary flex-1 p-4 text-black">
         <Navbar loggedIn={user} logout={logout}/>
+        <div className="Navbar flex flex-col">
         Home Page
         {props.loggedIn ? (
           <h1>Welcome {props.loggedIn.displayName} </h1>
         ) : (
           <></>
         )}
+        </div>
       </div>
     </div>
   );
