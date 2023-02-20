@@ -4,13 +4,12 @@ import Home from "../Home.js"
 import Navbar from '../Navbar'
 import styled from 'styled-components'
 
-
 const Container = styled.div`
-  background: #E7EDF2;
+  background: #e7edf2;
   width: 100%;
 `;
 const Title = styled.h1`
-  background: #E7EDF2;
+  background: #e7edf2;
   text-align: center;
   font-size: 20px;
   height: 60px;

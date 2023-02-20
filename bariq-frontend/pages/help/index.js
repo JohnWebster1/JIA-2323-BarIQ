@@ -1,79 +1,110 @@
-import Head from 'next/head'
-import {useEffect, useState} from "react";
-import {initFirebase} from "../../util/firebaseApp";
+import Head from "next/head";
+import { useEffect, useState } from "react";
+import { initFirebase } from "../../util/firebaseApp";
 import { getAuth } from "firebase/auth";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import Navbar from "../../components/Navbar";
 import Centered from "../../components/Centered";
-import {useAuthState} from "react-firebase-hooks/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import Articles from "../../components/Articles/ArticlesPreview";
-import {getArticles} from "../../util/getArticles";
+import { getArticles } from "../../util/getArticles";
 import SearchBar from "../../components/Articles/SearchBar";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import styled from "styled-components";
+
+const Container = styled.div`
+  background: #e7edf2;
+  width: 100%;
+`;
+const Title = styled.h1`
+  background: #e7edf2;
+  text-align: center;
+  font-size: 20px;
+  height: 60px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+`;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 export default function Index() {
-    // Navigation
-    const router = useRouter()
+  // Navigation
+  const router = useRouter();
 
-    // Authentication
-    initFirebase()
-    const auth = getAuth()
-    const [user, loading] = useAuthState(auth);
+  // Authentication
+  initFirebase();
+  const auth = getAuth();
+  const [user, loading] = useAuthState(auth);
 
-    // Get articles
-    const [originalData, setOriginalData] = useState(new Map());
-    const [articlesComponent, setArticlesComponent] = useState(<>Loading...</>);
-    useEffect(() => {
-        getArticles().then(data => {
-            if (data !== undefined) {
-                setOriginalData(data);
-                setArticlesComponent(<Articles data={data} router={router}/>);
-            }
-        });
-    }, []);
+  // Get articles
+  const [originalData, setOriginalData] = useState(new Map());
+  const [articlesComponent, setArticlesComponent] = useState(<>Loading...</>);
+  useEffect(() => {
+    getArticles().then((data) => {
+      if (data !== undefined) {
+        setOriginalData(data);
+        setArticlesComponent(<Articles data={data} router={router} />);
+      }
+    });
+  }, []);
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-    const logout = () => {
-        auth.signOut().then(() => {
-            if (!user) {
-                router.push("/")
-            }
-        });
-    }
+  const logout = () => {
+    auth.signOut().then(() => {
+      if (!user) {
+        router.push("/");
+      }
+    });
+  };
 
-    return (<div>
-        <Head>
-            <title>Bar IQ | Help</title>
-            <meta name="description" content="The help page for Bar IQ."/>
-            <link rel="icon" href="../public/favicon.ico"/>
-        </Head>
+  return (
+    <>
+      <Head>
+        <title>Bar IQ | Help</title>
+        <meta name="description" content="The help page for Bar IQ." />
+        <link rel="icon" href="../public/favicon.ico" />
+      </Head>
 
-        <Navbar loggedIn={user} logout={logout}/>
-
-        <Centered>
-            <h1>Optimize your warehouse.</h1>
-            <SearchBar onChange={e => {
+      <Wrapper>
+        <Sidebar />
+        <Container>
+          <Navbar loggedIn={user} logout={logout} />
+          <Centered>
+            <Title>RFID Search Engine</Title>
+            <SearchBar
+              key="searchbar"
+              onChange={(e) => {
                 const input = e.target.value.trim().toLowerCase();
-                const tempData = new Map()
+                const tempData = new Map();
                 originalData.forEach((value, key) => {
-                    if (value.title.toLowerCase().trim().includes(input)) {
-                        tempData.set(key, value);
-                    }
-                })
+                  if (value.title.toLowerCase().trim().includes(input)) {
+                    tempData.set(key, value);
+                  }
+                });
 
                 // If no articles have a title containing input, start searching content
                 if (tempData.size === 0) {
-                    originalData.forEach((value, key) => {
-                        if (value.content.toLowerCase().includes(input)) {
-                            tempData.set(key, value);
-                        }
-                    })
+                  originalData.forEach((value, key) => {
+                    if (value.content.toLowerCase().includes(input)) {
+                      tempData.set(key, value);
+                    }
+                  });
                 }
-                setArticlesComponent(<Articles data={tempData} router={router}/>);
-            }}/>
+                setArticlesComponent(
+                  <Articles data={tempData} router={router} />
+                );
+              }}
+            />
             {articlesComponent}
-        </Centered>
-    </div>)
+          </Centered>
+        </Container>
+      </Wrapper>
+    </>
+  );
 }
