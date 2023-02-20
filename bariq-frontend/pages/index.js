@@ -1,14 +1,14 @@
 import Head from 'next/head'
-// import Navbar from "../components/Navbar";
-// import Centered from "../components/Centered";
+
 import {useAuthState} from "react-firebase-hooks/auth";
 import {initFirebase} from "../util/firebaseApp";
 import {getAuth} from "firebase/auth";
 import {useRouter} from "next/router";
-// import { Route, Router } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Layout from '../components/Sidebar/Layout';
 import styled from "styled-components";
+import Image from "next/image";
+
 
 export default function Home() {
     initFirebase()
@@ -32,6 +32,12 @@ export default function Home() {
     height:380px;
     width: 100%;
   `;
+    const ImageWrapper = styled.div`
+    position: relative;
+    width: 105px;
+    height: 100px;
+    margin: -20px 0px;
+  `;
 
     return (<div>
             <Head>
@@ -49,13 +55,17 @@ export default function Home() {
             <Footer >
                 <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                            </svg>
-                            <span class="ml-3 text-xl">Bar IQ</span>
-                        </a>
-                        <p class="mt-2 text-sm text-gray-500">lorem ipsum</p>
+                        
+                        <ImageWrapper>
+                            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                                <Image
+                                    src={"/../public/logo.png"}
+                                    alt="hi"
+                                    layout="fill"
+                                    objectFit="contain"
+                                />
+                            </a>
+                        </ImageWrapper>
                     </div>
                     <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
                         <div class="lg:w-1/4 md:w-1/2 w-full px-4">

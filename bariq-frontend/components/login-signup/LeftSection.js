@@ -40,7 +40,7 @@ function LeftSection() {
         <Wrapper>
             <LogoWrapper>
                 <a
-                    href="/"
+                    href="/login"
                 >
                     <Image
                         src={"/../public/logo.png"}

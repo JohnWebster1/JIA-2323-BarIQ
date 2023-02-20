@@ -138,7 +138,7 @@ function RightSection(props) {
                 <SwitchButton href={props.href}>{props.topButtonText}</SwitchButton>
             </SwitchTextWrapper>
             <Right>
-                <Header>Welcome to BarIQ!</Header>
+                <Header>Welcome to Bar IQ!</Header>
                 <Subtext>{props.headerSubText}</Subtext>
 
                 {props.useName ? (<>

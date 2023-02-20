@@ -6,11 +6,11 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-  background: #DBE2E9;
+  background: #E7EDF2;
   width: 100%;
 `;
 const Title = styled.h1`
-background: #DBE2E9;
+background: #E7EDF2;
 text-align: center;
 font-size: 20px;
 height: 60px;
