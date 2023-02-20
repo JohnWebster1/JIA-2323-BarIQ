@@ -7,6 +7,7 @@ const Wrapper = styled.div`
     align-items: center;
     width: 100%;
     padding: 20px;
+    background: white:
 `;
 
 function Centered(props) {
