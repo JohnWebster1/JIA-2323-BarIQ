@@ -33,7 +33,7 @@ export default function Home() {
                 <link rel="icon" href="../public/favicon.ico"/>
             </Head>
 
-            <Navbar loggedIn={user} logout={logout}/>
+            {/*<Navbar loggedIn={user} logout={logout}/> */}
             
             {/* Make all changes to the UI here */}
             <Layout loggedIn={user}/>
