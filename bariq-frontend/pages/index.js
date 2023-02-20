@@ -1,13 +1,12 @@
 import Head from 'next/head'
-import Navbar from "../components/Navbar";
-import Centered from "../components/Centered";
+// import Navbar from "../components/Navbar";
+// import Centered from "../components/Centered";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {initFirebase} from "../util/firebaseApp";
 import {getAuth} from "firebase/auth";
 import {useRouter} from "next/router";
 // import { Route, Router } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Sidebar from '../components/Sidebar/Sidebar.jsx';
 import Layout from '../components/Sidebar/Layout';
 import styled from "styled-components";
 

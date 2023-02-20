@@ -10,36 +10,6 @@ import {useAuthState} from "react-firebase-hooks/auth";
 import {getArticles} from "../util/getArticles";
 
 export default function Home() {
-    // Navigation
-    // const router = useRouter()
-
-    // // Authentication
-    // initFirebase()
-    // const auth = getAuth()
-    // const [user, loading] = useAuthState(auth);
-
-    // Get articles
-    // const [articlesComponent, setArticlesComponent] = useState(<>Loading...</>);
-    // useEffect(() => {
-    //     getArticles().then(data => {
-    //         if (data !== undefined) {
-    //             setArticlesComponent(<Articles data={data} router={router}/>);
-    //         }
-    //     });
-    // }, []);
-
-    // if (loading) {
-    //     return <div>Loading...</div>;
-    // }
-
-    // const logout = () => {
-    //     auth.signOut().then(() => {
-    //         if (!user) {
-    //             router.push("/")
-    //         }
-    //     });
-    // }
-
     return (
     <div>
         {/* Home section 1 */}
