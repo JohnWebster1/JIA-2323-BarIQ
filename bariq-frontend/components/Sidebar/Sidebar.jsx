@@ -14,8 +14,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 
-
-
 const menuItems = [
   { id: 1, label: "Dashboard", icon: HomeIcon, link: "/" },
   { id: 2, label: "FAQs", icon: ArticleIcon, link: "/help" },
@@ -48,7 +46,7 @@ const Sidebar = () => {
   );
 
   const wrapperClasses = classNames(
-    "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col",
+    "h-screen px-4 pt-8 pb-4 bg- flex justify-between flex-col",
     {
       ["w-80"]: !toggleCollapse,
       ["w-20"]: toggleCollapse,
@@ -80,13 +78,13 @@ const Sidebar = () => {
   };
 
   const LogoWrapper = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0px 0px;
-`;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px;
+  `;
 
   return (
     <div
@@ -98,26 +96,24 @@ const Sidebar = () => {
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">
           <div className="flex-none w-12 h-12 items-center pl-1">
-            {(!toggleCollapse || !isCollapsible) 
-            && <LogoWrapper>
-            <a
-                href="/"
-            >
-                <Image
+            {(!toggleCollapse || !isCollapsible) && (
+              <LogoWrapper>
+                <a href="/">
+                  <Image
                     src={"/../public/logo.png"}
                     alt="Picture of the logo"
                     layout="fill"
                     objectFit="contain"
-                />
-            </a>
-        </LogoWrapper>}
+                  />
+                </a>
+              </LogoWrapper>
+            )}
           </div>
           <span
             className={classNames("ml-2 text-lg font-medium text-text grow", {
               hidden: toggleCollapse,
             })}
-          >
-          </span>
+          ></span>
           {isCollapsible && (
             <button
               className={collapseIconClasses}
