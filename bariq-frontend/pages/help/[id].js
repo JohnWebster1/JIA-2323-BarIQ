@@ -8,6 +8,13 @@ import Centered from "../../components/Centered";
 import {useEffect, useState} from "react";
 import { useRouter } from 'next/router';
 import Article from "../../components/Articles/Article";
+import styled from "styled-components";
+import Footer from "../../components/Footer";
+import Sidebar from "../../components/Sidebar/Sidebar";
+
+const Wrapper = styled.div`
+    background: #E7EDF1;
+`;
 
 export default function Index() {
     // Authentication
@@ -43,7 +50,7 @@ export default function Index() {
         });
     }
 
-    return (<div>
+    return (<Wrapper>
         <Head>
             <title>Bar IQ | Help</title>
             <meta name="description" content="The help page for Bar IQ."/>
@@ -51,8 +58,10 @@ export default function Index() {
         </Head>
 
         <Navbar loggedIn={user} logout={logout}/>
+
         <Centered>
             {articleComponent}
         </Centered>
-    </div>)
+        <Footer/>
+    </Wrapper>)
 }
