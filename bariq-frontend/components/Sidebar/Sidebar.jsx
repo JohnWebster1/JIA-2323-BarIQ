@@ -35,7 +35,7 @@ const menuItems = [
 ];
 
 const Sidebar = () => {
-  const [toggleCollapse, setToggleCollapse] = useState(false);
+  const [toggleCollapse, setToggleCollapse] = useState(true);
   const [isCollapsible, setIsCollapsible] = useState(false);
 
   const router = useRouter();
