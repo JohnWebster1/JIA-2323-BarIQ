@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 const Nav = styled.nav`
-  background: #0070F3;
+  background: #1A1D4A;
   height: 60px;
   width: 100%;
 `;
@@ -48,13 +48,11 @@ const AtagSignup = styled.a`
 function Navbar(props) {
     return (
          <Nav>
-            <img></img>
             <List>
                 <ListItem><Atag className="active" href="/">Home</Atag></ListItem>
-                {props.loggedIn ? <></> : <ListItem><Atag href="/login">Log In</Atag></ListItem>}
+                {props.loggedIn ? <ListItem><Atag href="/login">Log Out</Atag></ListItem> : <ListItem><Atag href="/login">Log In</Atag></ListItem>}
                 {props.loggedIn ? <></> : <ListItem><AtagSignup href="/signup">Sign Up</AtagSignup></ListItem>}
                 {props.loggedIn ? <ListItem><Atag onClick={props.logout}>Log Out</Atag></ListItem> : <></>}
-                <ListItem><Atag className="active" href="/help">Help</Atag></ListItem>
             </List>
         </Nav>
     );

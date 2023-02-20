@@ -110,8 +110,8 @@ const Sidebar = () => {
             return (
               <div className={classes}>
                 <Link href={menu.link} legacyBehavior>
-                  <a className="flex py-4 px-3 items-center w-full h-full ">
-                    <div style={{ width: "2.5rem" }}>
+                  <a className="flex py-3 px-4 items-center w-full h-full ">
+                    <div style={{ width: "3rem" }}>
                       <Icon />
                     </div>
                     {!toggleCollapse && (
