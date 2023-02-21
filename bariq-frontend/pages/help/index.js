@@ -17,6 +17,7 @@ const Container = styled.div`
   background: #e7edf2;
   width: 100%;
 `;
+
 const Title = styled.h1`
   background: #e7edf2;
   text-align: center;
@@ -65,7 +66,7 @@ export default function Index() {
     };
 
     return (
-        <>
+        <div>
             <Head>
                 <title>Bar IQ | Help</title>
                 <meta name="description" content="The help page for Bar IQ."/>
@@ -107,6 +108,6 @@ export default function Index() {
                 </Container>
             </Wrapper>
             <Footer/>
-        </>
+        </div>
     );
 }
