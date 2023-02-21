@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
   background: #C2C8CF;
-  width: 100%;
+  min-width: 100vw;
 `;
 
 const ImageWrapper = styled.div`
@@ -17,7 +17,8 @@ const LinkRows = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 120px 0;
+  padding: 40px 120px 0;;
+  min-width: 100vw;
 `;
 
 const Column = styled.div`

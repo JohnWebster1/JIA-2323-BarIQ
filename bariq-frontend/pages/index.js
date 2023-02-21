@@ -19,6 +19,7 @@ export default function Home() {
     }
 
     const logout = () => {
+        console.log("Logging out...")
         auth.signOut().then(r => {
             if (!user) {
                 router.push("/")
@@ -32,11 +33,10 @@ export default function Home() {
                 <meta name="description" content="Bar IQ is a warehouse management software for beer warehouses."/>
                 <link rel="icon" href="../public/favicon.ico"/>
             </Head>
-            {/* <Navbar loggedIn={user} logout={logout}/> */}
             
             
             {/* Layout */}
-            <Layout loggedIn={user}/>
+            <Layout loggedIn={user} logOut={logout}/>
 
             <Footer/>
         </div>)

@@ -26,9 +26,11 @@ export default function Index() {
     const router = useRouter();
     const {id} = router.query;
     const [articleComponent, setArticleComponent] = useState(<>Loading...</>);
+    const [articleLoaded, setArticleLoaded] = useState(false);
     useEffect(() => {
         if (id !== undefined) {
             getArticleById(id).then(data => {
+                setArticleLoaded(true);
                 if (data === undefined) {
                     setArticleComponent(<h1>Article not found.</h1>);
                 } else {
@@ -62,6 +64,6 @@ export default function Index() {
         <Centered>
             {articleComponent}
         </Centered>
-        <Footer/>
+        {articleLoaded && <Footer/>}
     </Wrapper>)
 }
