@@ -21,7 +21,7 @@ const menuItems = [
   { id: 4, label: "Video Modules", icon: VideosIcon, link: "/help" },
   { id: 5, label: "Floor Plan Generator", icon: HomeIcon, link: "/help" },
   { id: 6, label: "Community", icon: UsersIcon, link: "/help" },
-  { id: 7, label: "ROI Calculator", icon: ArticleIcon, link: "/help" },
+  { id: 7, label: "ROI Calculator", icon: ArticleIcon, link: "/roi" },
   { id: 8, label: "Chat", icon: UsersIcon, link: "/help" },
   { id: 9, label: "Equipment Supplier Map", icon: ArticleIcon, link: "/help" },
   { id: 10, label: "Project Status Tool", icon: ArticleIcon, link: "/help" },
@@ -91,7 +91,10 @@ const Sidebar = () => {
       className={wrapperClasses}
       onMouseEnter={onMouseOver}
       onMouseLeave={onMouseOver}
-      style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s", height: "auto"}}
+      style={{
+        transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s",
+        height: "auto",
+      }}
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">
@@ -110,10 +113,10 @@ const Sidebar = () => {
             )}
           </div>
           <span
-    className={classNames("ml-2 text-lg font-medium text-text grow", {
-      hidden: toggleCollapse,
-    })}
-    />
+            className={classNames("ml-2 text-lg font-medium text-text grow", {
+              hidden: toggleCollapse,
+            })}
+          />
           {isCollapsible && (
             <button
               className={collapseIconClasses}
