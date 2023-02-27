@@ -5,11 +5,11 @@ import Navbar from '../Navbar'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  background: #e7edf2;
+  background: #F7FCFF;
   width: 100%;
 `;
 const Title = styled.h1`
-  background: #e7edf2;
+  background: #F7FCFF;
   text-align: center;
   font-size: 20px;
   height: 60px;
