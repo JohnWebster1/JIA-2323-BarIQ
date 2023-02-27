@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  background: #0070F3;
+  background: #0031F3;
   height: 70px;
   width: 104%;
-  margin: -16px -15px;
+  margin: -16px -16px 7px;
 `;
 
 const List = styled.ul`
   float: right;
   margin: 12px 20px 0 0;
-  
+  padding: 8px;
 `;
 
 const ListItem = styled.li`
