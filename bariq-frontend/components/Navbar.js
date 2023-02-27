@@ -10,11 +10,13 @@ const Nav = styled.nav`
 const List = styled.ul`
   float: right;
   margin: 12px 20px 0 0;
+  
 `;
 
 const ListItem = styled.li`
   display: inline-block;
   margin: 5px 5px;
+  width: 5;
 `;
 
 const Atag = styled.a`
@@ -72,7 +74,7 @@ const Ttag = styled.a`
   }
 `;
 
-
+// Navbar components 
 function Navbar(props) {
     return (
         <Nav>

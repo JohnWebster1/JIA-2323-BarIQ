@@ -11,6 +11,7 @@ import {useRouter} from "next/router";
 import Navbar from "../Navbar";
 import Sidebar from './Sidebar';
 
+// Components for Layout of NavBar
 const Layout = (props) => {
   initFirebase()
   const auth = getAuth()
@@ -35,9 +36,9 @@ const Layout = (props) => {
       <div className="bg-primary flex-1 p-4 text-black">
         <Navbar loggedIn={user} logout={logout}/>
         <div className="Navbar flex flex-col">
-        Home Page
+            Home Page
         {props.loggedIn ? (
-          <h1>Welcome {props.loggedIn.displayName} </h1>
+          <h1 align = "left">Welcome {props.loggedIn.displayName} </h1>
         ) : (
           <></>
         )}
