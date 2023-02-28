@@ -3,5 +3,6 @@
 /workspace.xml
 node_modules
 .idea
+old_roi_calculator
 # Editor-based HTTP Client requests
 /httpRequests/
