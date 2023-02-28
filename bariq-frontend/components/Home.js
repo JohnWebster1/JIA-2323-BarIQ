@@ -31,7 +31,7 @@ export default function Home() {
                         <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article 1</h1>
                         <p class="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                         <a class="inline-flex items-center">
-                        <img alt="blog" src="https://dummyimage.com/103x103" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
+                        {/* <img alt="blog" src="https://dummyimage.com/103x103" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
                         <span class="flex-grow flex flex-col pl-3">
                             <span class="title-font font-medium text-gray-900">Alper Kamu</span>
                         </span>
@@ -50,7 +50,7 @@ export default function Home() {
                         <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article 2</h1>
                         <p class="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                         <a class="inline-flex items-center">
-                        <img alt="blog" src="https://dummyimage.com/102x102" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
+                        {/* <img alt="blog" src="https://dummyimage.com/102x102" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
                         <span class="flex-grow flex flex-col pl-3">
                             <span class="title-font font-medium text-gray-900">Holden Caulfield</span>
                         </span>
@@ -69,7 +69,7 @@ export default function Home() {
                         <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article 3</h1>
                         <p class="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                         <a class="inline-flex items-center">
-                        <img alt="blog" src="https://dummyimage.com/101x101" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
+                        {/* <img alt="blog" src="https://dummyimage.com/101x101" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
                         <span class="flex-grow flex flex-col pl-3">
                             <span class="title-font font-medium text-gray-900">Henry Letham</span>
                         </span>
