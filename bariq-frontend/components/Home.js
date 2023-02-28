@@ -23,17 +23,17 @@ export default function Home() {
                 <div class="py-8 px-4 lg:w-1/3">
                     <div class="h-full flex items-start">
                     <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                        <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Feb</span>
+                        <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
                         <span class="font-medium text-lg text-gray-800 title-font leading-none">18</span>
                     </div>
                     <div class="flex-grow pl-6">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">EVENT</h2>
-                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">RFID Expo 2023</h1>
-                        <p class="leading-relaxed mb-5">The 2023 RFID Expo will be held at Mercedes Benz Stadium on April 4th, 2023.</p>
+                        <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">CATEGORY</h2>
+                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article 1</h1>
+                        <p class="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                         <a class="inline-flex items-center">
                         <img alt="blog" src="https://dummyimage.com/103x103" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
                         <span class="flex-grow flex flex-col pl-3">
-                            <span class="title-font font-medium text-gray-900">Author Name</span>
+                            <span class="title-font font-medium text-gray-900">Alper Kamu</span>
                         </span>
                         </a>
                     </div>
@@ -42,17 +42,17 @@ export default function Home() {
                 <div class="py-8 px-4 lg:w-1/3">
                     <div class="h-full flex items-start">
                     <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                        <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jan</span>
-                        <span class="font-medium text-lg text-gray-800 title-font leading-none">31</span>
+                        <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
+                        <span class="font-medium text-lg text-gray-800 title-font leading-none">18</span>
                     </div>
                     <div class="flex-grow pl-6">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">ARTICLE</h2>
-                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article Name</h1>
-                        <p class="leading-relaxed mb-5">Description summary of the article.</p>
+                        <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">CATEGORY</h2>
+                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article 2</h1>
+                        <p class="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                         <a class="inline-flex items-center">
                         <img alt="blog" src="https://dummyimage.com/102x102" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
                         <span class="flex-grow flex flex-col pl-3">
-                            <span class="title-font font-medium text-gray-900">Author Name</span>
+                            <span class="title-font font-medium text-gray-900">Holden Caulfield</span>
                         </span>
                         </a>
                     </div>
@@ -61,13 +61,13 @@ export default function Home() {
                 <div class="py-8 px-4 lg:w-1/3">
                     <div class="h-full flex items-start">
                     <div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-                        <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jan</span>
-                        <span class="font-medium text-lg text-gray-800 title-font leading-none">8</span>
+                        <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">Jul</span>
+                        <span class="font-medium text-lg text-gray-800 title-font leading-none">18</span>
                     </div>
                     <div class="flex-grow pl-6">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">ARTICLE</h2>
-                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article Name</h1>
-                        <p class="leading-relaxed mb-5">Article description summary goes here.</p>
+                        <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">CATEGORY</h2>
+                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article 3</h1>
+                        <p class="leading-relaxed mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
                         <a class="inline-flex items-center">
                         <img alt="blog" src="https://dummyimage.com/101x101" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
                         <span class="flex-grow flex flex-col pl-3">
@@ -96,7 +96,7 @@ export default function Home() {
                     </div>
                     <div class="flex-grow pl-6">
                     <h2 class="text-gray-900 text-lg title-font font-medium mb-2">ROI Calculator</h2>
-                    <p class="leading-relaxed text-base">Our ROI calculator uses a variety of factors to determine your estimated ROI by becoming a BarIQ customer! It will consider your current expenses, profits, and warehouse size.</p>
+                    <p class="leading-relaxed text-base">I'm a paragraph. Click here to add your own text and edit me. It's easy. I'm a paragraph. Click here to add your own text and edit me. It's easy.</p>
                     <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -112,7 +112,7 @@ export default function Home() {
                     </div>
                     <div class="flex-grow pl-6">
                     <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Generate Floor Plans</h2>
-                    <p class="leading-relaxed text-base">At BarIQ, we take your current warehouse layout and can provide you with a potential layout that considers your RFID integration. Check out our Floor Plan Generator!</p>
+                    <p class="leading-relaxed text-base">I'm a paragraph. Click here to add your own text and edit me. It's easy. I'm a paragraph. Click here to add your own text and edit me. It's easy.</p>
                     <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -128,7 +128,7 @@ export default function Home() {
                     </div>
                     <div class="flex-grow pl-6">
                     <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Find Suppliers</h2>
-                    <p class="leading-relaxed text-base">The BarIQ supplier map is a tool for clients to select their desired supplies and equipment and show clients where to find them.</p>
+                    <p class="leading-relaxed text-base">I'm a paragraph. Click here to add your own text and edit me. It's easy. I'm a paragraph. Click here to add your own text and edit me. It's easy.</p>
                     <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
