@@ -31,7 +31,7 @@ export default function Home() {
                         <h1 class="title-font text-xl font-medium text-gray-900 mb-3">RFID Expo 2023</h1>
                         <p class="leading-relaxed mb-5">The 2023 RFID Expo will be held at Mercedes Benz Stadium on April 4th, 2023.</p>
                         <a class="inline-flex items-center">
-                        <img alt="blog" src="https://dummyimage.com/103x103" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
+                        {/* <img alt="blog" src="https://dummyimage.com/103x103" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
                         <span class="flex-grow flex flex-col pl-3">
                             <span class="title-font font-medium text-gray-900">Author Name</span>
                         </span>
@@ -50,7 +50,7 @@ export default function Home() {
                         <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article Name</h1>
                         <p class="leading-relaxed mb-5">Description summary of the article.</p>
                         <a class="inline-flex items-center">
-                        <img alt="blog" src="https://dummyimage.com/102x102" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
+                        {/* <img alt="blog" src="https://dummyimage.com/102x102" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
                         <span class="flex-grow flex flex-col pl-3">
                             <span class="title-font font-medium text-gray-900">Author Name</span>
                         </span>
@@ -69,7 +69,7 @@ export default function Home() {
                         <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Article Name</h1>
                         <p class="leading-relaxed mb-5">Article description summary goes here.</p>
                         <a class="inline-flex items-center">
-                        <img alt="blog" src="https://dummyimage.com/101x101" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/>
+                        {/* <img alt="blog" src="https://dummyimage.com/101x101" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
                         <span class="flex-grow flex flex-col pl-3">
                             <span class="title-font font-medium text-gray-900">Henry Letham</span>
                         </span>
