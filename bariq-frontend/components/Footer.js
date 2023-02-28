@@ -17,7 +17,7 @@ const LinkRows = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 120px 0;;
+  padding: 45px 290px 0;;
   min-width: 100vw;
 `;
 
@@ -33,13 +33,14 @@ const SectionTitle = styled.h2`
 `;
 
 const Link = styled.a`
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
-
+  color: #f0f0f0;
   &:hover {
     text-decoration: underline;
+    color: #1b93d2
   }
 `;
 
