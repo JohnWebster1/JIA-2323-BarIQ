@@ -42,6 +42,7 @@ const Link = styled.a`
 
   &:hover {
     text-decoration: underline;
+    color: #1b93d2;
   }
 `;
 
