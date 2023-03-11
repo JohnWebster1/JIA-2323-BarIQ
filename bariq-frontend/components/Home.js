@@ -6,7 +6,6 @@ import {useRouter} from "next/router";
 import Navbar from "./Navbar";
 import Centered from "./Centered";
 import {useAuthState} from "react-firebase-hooks/auth";
-// import Articles from "./ArticlesPreview";
 import {getArticles} from "../util/getArticles";
 
 
