@@ -9,9 +9,10 @@ const Container = styled.div`
   width: 100%;
 `;
 const Title = styled.h1`
-  background: #e7edf2;
+  background: white;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: normal 400;
   height: 60px;
   width: 100%;
   padding-top: 20px;
