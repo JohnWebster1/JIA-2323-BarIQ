@@ -21,6 +21,7 @@ const Title = styled.h1`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  background: #e7edf2;
 `;
 
 const Layout = (props) => {
@@ -32,7 +33,7 @@ const Layout = (props) => {
                 <Title>Interactive Resource Portal</Title>
                 {props.loggedIn ? <Title>Welcome {props.loggedIn.displayName}! </Title> : <></>}
                 <div className='bg-secondary flex-1 p-4 text-black'>
-                    <Home/>
+                  <Home/>
                 </div>
             </Container>
         </Wrapper>
