@@ -40,7 +40,7 @@ const Link = styled.a`
   color: #f0f0f0;
   &:hover {
     text-decoration: underline;
-    color: #1b93d2
+    color: #1b93d2;
   }
 `;
 
