@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar";
 import Centered from "../../components/Centered";
 import {useAuthState} from "react-firebase-hooks/auth";
 import Articles from "../../components/Articles/ArticlesPreview";
-import {getArticles} from "../../util/getArticles";
+import {getArticles, getCategories} from "../../util/getArticles";
 import SearchBar from "../../components/Articles/SearchBar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import styled from "styled-components";
@@ -45,13 +45,16 @@ export default function Index() {
     const [originalData, setOriginalData] = useState(new Map());
     const [articlesComponent, setArticlesComponent] = useState(<>Loading...</>);
     useEffect(() => {
-        getArticles().then((data) => {
-            if (data !== undefined) {
-                setOriginalData(data);
-                setArticlesComponent(<Articles data={data} router={router}/>);
-            }
+        getCategories().then((categories) => {
+            getArticles().then((data) => {
+                if (data !== undefined) {
+                    setOriginalData(data);
+                    setArticlesComponent(<Articles data={data} router={router} categories={categories}/>);
+                }
+            });
         });
     }, []);
+
 
     if (loading) {
         return <div>Loading...</div>;
