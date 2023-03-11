@@ -30,6 +30,7 @@ const Column = styled.div`
 const SectionTitle = styled.h2`
   font-weight: bold;
   font-size: 1.2rem;
+  color: #1b93d2;
 `;
 
 const Link = styled.a`
@@ -50,6 +51,7 @@ const BottomRow = styled.div`
   justify-content: space-between;
   padding: 0 120px 50px;
   margin-top: 40px;
+  color: white;
 `;
 
 const IconRow = styled.div`
