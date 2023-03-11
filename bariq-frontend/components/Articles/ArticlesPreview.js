@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {secondsToStringDate} from "../../util/format";
+import {useState} from "react";
 
 const ArticleList = styled.ul`
   list-style-type: none;
@@ -32,6 +33,39 @@ const ArticlePreview = styled.p`
   font-size: 1rem;
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+`
+
+const FilterWrapper = styled.div`
+  font-size: 16px;
+  margin-bottom: 20px;
+`
+
+const FilterList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`
+
+const FilterItem = styled.li`
+  margin-bottom: 5px;
+`
+
+const FilterLabel = styled.label`
+    margin-left: 10px;
+`;
+
+const FilterTitle = styled.h2`
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+`
+
+
 function contentToPreview(content) {
     let preview = content.substring(0, 200);
     if (content.length > 200) {
@@ -41,23 +75,23 @@ function contentToPreview(content) {
 }
 
 function ArticleComponent(props) {
-    let router = props.router;
+    let router = props.router
     let data = props.data
+    let categoriesMap = props.categories
+    let [selectedCategories, setSelectedCategories] = useState(new Set());
     let items = []
+    let articleToCategories = new Map();
     data.forEach((value, key) => {
-        items.push(
-            <div key={key} onClick={
-                () => {
-                    router.push(`/help/${key}`);
-                }
-            }>
-                <ArticleItem>
-                    <ArticleTitle>{value.title}</ArticleTitle>
-                    <ArticleDate>{secondsToStringDate(value.date.seconds)}</ArticleDate>
-                    <ArticlePreview>{contentToPreview(value.content)}</ArticlePreview>
-                </ArticleItem>
-            </div>
-        )
+        articleToCategories.set(key, value.categories);
+        items.push(<div key={key} onClick={() => {
+            router.push(`/help/${key}`);
+        }}>
+            <ArticleItem>
+                <ArticleTitle>{value.title}</ArticleTitle>
+                <ArticleDate>{secondsToStringDate(value.date.seconds)}</ArticleDate>
+                <ArticlePreview>{contentToPreview(value.content)}</ArticlePreview>
+            </ArticleItem>
+        </div>)
     });
 
     // Sort items by date
@@ -67,11 +101,47 @@ function ArticleComponent(props) {
         return dateB - dateA;
     })
 
-    return (
+    let categories = []
+    categoriesMap.forEach((value, key) => {
+        categories.push(<FilterItem key={key}>
+            <input type="checkbox" id={key} name={value} value={value} onChange={(event) => {
+                const newSet = new Set(selectedCategories);
+                if (event.target.checked) {
+                    newSet.add(parseInt(event.target.id));
+                } else {
+                    newSet.delete(parseInt(event.target.id));
+                }
+                setSelectedCategories(newSet);
+            }}/>
+            <FilterLabel htmlFor={key}>{value}</FilterLabel>
+        </FilterItem>)
+    });
+
+    return (<Wrapper>
+        <FilterWrapper>
+            <FilterList>
+                <FilterTitle>Filter by Category</FilterTitle>
+                {categories}
+            </FilterList>
+        </FilterWrapper>
         <ArticleList>
-            {items}
+            {items.filter(item => {
+                if (selectedCategories.size === 0) {
+                    return true;
+                }
+                let result = false;
+                selectedCategories.forEach(id1 => {
+                    articleToCategories.get(item.key).forEach(id2 => {
+                        console.log(id1, id2)
+                        if (id1 === id2) {
+                            result = true;
+                        }
+                    });
+                });
+                return result;
+            })}
         </ArticleList>
-    );
+    </Wrapper>);
 }
 
 export default ArticleComponent;
