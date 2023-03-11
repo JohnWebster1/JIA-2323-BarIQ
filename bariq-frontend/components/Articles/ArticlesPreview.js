@@ -55,10 +55,6 @@ const FilterItem = styled.li`
   margin-bottom: 5px;
 `
 
-const FilterInput = styled.input`
-    
-`;
-
 const FilterLabel = styled.label`
     margin-left: 10px;
 `;
@@ -117,7 +113,7 @@ function ArticleComponent(props) {
                 }
                 setSelectedCategories(newSet);
             }}/>
-            <FilterLabel htmlFor={value}>{value}</FilterLabel>
+            <FilterLabel htmlFor={key}>{value}</FilterLabel>
         </FilterItem>)
     });
 
