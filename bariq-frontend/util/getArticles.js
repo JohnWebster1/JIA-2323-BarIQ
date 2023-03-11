@@ -3,6 +3,7 @@ import {initFirestore} from "./firebaseApp";
 
 const db = initFirestore();
 const articles = collection(db, "help-articles");
+const categories = collection(db, "categories");
 
 export async function getArticles() {
     const querySnapshot = await getDocs(articles);
@@ -22,4 +23,14 @@ export async function getArticleById(id) {
         return undefined;
     }
     return querySnapshot.docs[0].data();
+}
+
+export async function getCategories() {
+    const querySnapshot = await getDocs(categories);
+    let idToCategories = new Map();
+    querySnapshot.forEach((doc) => {
+        idToCategories.set(doc.id, doc.data().category);
+    });
+
+    return idToCategories;
 }
