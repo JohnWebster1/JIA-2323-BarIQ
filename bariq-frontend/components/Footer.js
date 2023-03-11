@@ -2,7 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
-  background: #1A1D4A;
+  background: #C2C8CF;
   min-width: 100vw;
 `;
 
@@ -17,7 +17,7 @@ const LinkRows = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 120px 0;;
+  padding: 45px 290px 0;;
   min-width: 100vw;
 `;
 
@@ -30,16 +30,14 @@ const Column = styled.div`
 const SectionTitle = styled.h2`
   font-weight: bold;
   font-size: 1.2rem;
-  color: #1b93d2;
 `;
 
 const Link = styled.a`
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
-  color: #C2C8CF;
-
+  color: #f0f0f0;
   &:hover {
     text-decoration: underline;
     color: #1b93d2;
@@ -52,7 +50,6 @@ const BottomRow = styled.div`
   justify-content: space-between;
   padding: 0 120px 50px;
   margin-top: 40px;
-  color: white;
 `;
 
 const IconRow = styled.div`
