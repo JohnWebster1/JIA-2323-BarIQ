@@ -2,7 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
-  background: #C2C8CF;
+  background: #1A1D4A;
   min-width: 100vw;
 `;
 
