@@ -4,7 +4,7 @@ import LogoutIcon from "./sidebar-icons";
 const Nav = styled.nav`
   background: #1A1D6A;
   height: 60px;
-  width: 100%;
+  width: 95vw;
 `;
 
 const List = styled.ul`
