@@ -17,6 +17,7 @@ const Title = styled.h1`
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 15px;
 `;
 
 const Wrapper = styled.div`
