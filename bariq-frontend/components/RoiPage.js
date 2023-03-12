@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import styled from "styled-components";
 
 const Heading = styled.h1`
@@ -82,7 +81,6 @@ function RoiPage() {
             <li>2. Enter warehouse size</li>
             <li>3. Enter RFID expenses</li>
         </ol>
-        
     </div>
   )
 }

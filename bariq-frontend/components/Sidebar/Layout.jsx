@@ -9,9 +9,10 @@ const Container = styled.div`
   width: 100%;
 `;
 const Title = styled.h1`
-  background: #e7edf2;
+  background: white;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: normal 400;
   height: 60px;
   width: 100%;
   padding-top: 20px;
@@ -21,6 +22,7 @@ const Title = styled.h1`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  background: #e7edf2;
 `;
 
 const Layout = (props) => {
@@ -32,7 +34,7 @@ const Layout = (props) => {
                 <Title>Interactive Resource Portal</Title>
                 {props.loggedIn ? <Title>Welcome {props.loggedIn.displayName}! </Title> : <></>}
                 <div className='bg-secondary flex-1 p-4 text-black'>
-                    <Home/>
+                  <Home/>
                 </div>
             </Container>
         </Wrapper>

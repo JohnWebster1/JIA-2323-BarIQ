@@ -1,13 +1,19 @@
-import { useAuthState } from "react-firebase-hooks/auth";
+import Head from "next/head";
+import {useEffect, useState} from "react";
 import { initFirebase } from "../util/firebaseApp";
 import { getAuth } from "firebase/auth";
 import { useRouter } from "next/router";
-import Footer from "../components/Footer";
-import styled from "styled-components";
-import Sidebar from "../components/Sidebar/Sidebar";
+
 import Navbar from "../components/Navbar";
 import Centered from "../components/Centered";
+
+import { useAuthState } from "react-firebase-hooks/auth";
+
+import Sidebar from "../components/Sidebar/Sidebar";
+import styled from "styled-components";
+import Footer from "../components/Footer";
 import RoiPage from "../components/RoiPage";
+
 
 const Container = styled.div`
   background: #e7edf2;
@@ -51,10 +57,19 @@ const RoiButton = styled.a`
   }
 `;
 export default function ROI() {
+  // Navigation
+  const router = useRouter();
+  
+  // Authentication
   initFirebase();
   const auth = getAuth();
   const [user, loading] = useAuthState(auth);
-  const router = useRouter();
+  
+
+
+
+
+
 
   if (loading) {
     return <div>Loading...</div>;
@@ -70,6 +85,12 @@ export default function ROI() {
 
   return (
     <div>
+      <Head>
+        <title>Bar IQ | ROI Calculator</title>
+        <meta name="description" content="The ROI page for Bar IQ."/>
+        <link rel="icon" href="../public/favicon.ico"/>
+      </Head>
+
       <Wrapper>
         <Sidebar />
         <Container>
@@ -80,6 +101,7 @@ export default function ROI() {
               <RoiPage/>
             </Container2>
             <RoiButton> Go To Calculator</RoiButton>
+
           </Centered>
         </Container>
       </Wrapper>
