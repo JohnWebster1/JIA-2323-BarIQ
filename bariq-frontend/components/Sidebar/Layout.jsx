@@ -9,13 +9,14 @@ const Container = styled.div`
   width: 100%;
 `;
 const Title = styled.h1`
-  background: #e7edf2;
-  text-align: center;
-  font-size: 20px;
+  background: #white;
+  text-align: right;
+  font-size: 30px;
+  font-family: normal 400;
   height: 60px;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 `;
 
 const Wrapper = styled.div`
