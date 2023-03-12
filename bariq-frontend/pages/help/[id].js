@@ -13,7 +13,7 @@ import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
 const Wrapper = styled.div`
-    background: #E7EDF1;
+    background: #E7EDF2;
 `;
 
 export default function Index() {
