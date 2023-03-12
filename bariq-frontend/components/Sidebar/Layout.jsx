@@ -9,7 +9,7 @@ const Container = styled.div`
   width: 100%;
 `;
 const Title = styled.h1`
-  background: #white;
+  background: white;
   text-align: right;
   font-size: 30px;
   font-family: normal 400;
