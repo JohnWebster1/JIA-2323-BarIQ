@@ -15,7 +15,7 @@ export default function Home() {
     <div>
         {/* Home section 1 */}
         <section class="text-gray-600 body-font">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">Featured
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">Featured Articles
             </h1>
             <div class="container px-5 py-15 mx-auto">
                 <div class="flex flex-wrap -mx-4 -my-8">
