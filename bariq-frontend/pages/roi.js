@@ -32,7 +32,6 @@ const Title = styled.h1`
   height: 60px;
   width: 100%;
   padding-top: 20px;
-  padding-bottom: 100px;
   font-weight: bold;
   color: #1b93d2;
 `;
