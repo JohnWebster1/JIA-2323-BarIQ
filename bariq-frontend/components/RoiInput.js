@@ -24,7 +24,7 @@ const StyledLabel = styled.label`
 
 const Wrapper = styled.div`
   max-width: auto;
-  margin: 0px auto 20px;
+  margin: 10px auto 50px;
   text-align: center;
 `;
 
@@ -135,18 +135,27 @@ function RoiInput(props) {
   padding: 45px 290px 0px;
   min-width: 100vw;
 `;
+  const FieldColumn = styled.div`
+  padding: 10px 30px 10px 30px;
+  `;
 
   return (
     <Wrapper>
       <RoiFieldRows>
-        <form>{inputs1}</form>
-        <form>{inputs2}</form>
-        <form>{inputs3}</form>
+        <FieldColumn>
+          <form>{inputs1}</form>
+        </FieldColumn>
+        <FieldColumn>
+          <form>{inputs2}</form>
+        </FieldColumn>
+        <FieldColumn>
+          <form>{inputs3}</form>
+        </FieldColumn>
       </RoiFieldRows>
       
       <div>
         <Centered>
-          <StyledButton onClick={handleOpenModal}>Click Me</StyledButton>
+          <StyledButton onClick={handleOpenModal}>Calculate</StyledButton>
           <Modal isOpen={showModal} onRequestClose={handleCloseModal}>
             <p>1st Year ROI: $275,000</p>
             <p>2nd Year ROI: $582,000</p>
