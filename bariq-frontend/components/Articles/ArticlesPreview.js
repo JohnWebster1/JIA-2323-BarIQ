@@ -47,6 +47,7 @@ const FilterWrapper = styled.div`
   padding: 20px;
   border-radius: 20px;
   margin-top: 10px;
+  height: fit-content;
 `
 
 const FilterList = styled.ul`
