@@ -6,48 +6,66 @@ const Heading = styled.h1`
   background:  #E7EDF2;
   font-size: 20px;
   height: 60px;
-  width: 95vw;
   font-weight: bold;
   color: #1b93d2;
   padding-top: 20px;
   padding-bottom: 50px;
-  margin: 0px 0px 0px 0px;
+  margin: 0;
 `;
-
 
 const LinkRows = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 45px 250px 50px;
-  min-width: 100vw;
+  padding: 45px 0 50px;
+  width: 100%;
+  margin: 0 auto;
 `;
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  background: #d9dce3;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 10px;
+  max-width: 250px;
 `;
 
 const Link = styled.a`
   font-size: 1.0rem;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   display: inline-block;
   text-decoration: none;
-  color: #black;
+  color: black;
   &:hover {
     color: #1b93d2;
   }
 `;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+const OrderedList = styled.ol`
+  margin: 20px 0;
+`;
+
 function RoiPage() {
   return (
-    <div>
+    <Wrapper>
         <Heading>Understanding your ROI</Heading>
-        <p>Return on investment (ROI) can be used to determine the profitability associated with capital expenditures for your warehouse. </p>
-        <p>Bar IQ offers this tool to help you explore the business value a partnership could bring to your warehouse.</p>
+        <p>Return on investment (ROI) can be used to determine<br/>the profitability associated with capital expenditures for your warehouse.</p>
+        <br/>
+        <p>Bar IQ offers this tool to help you explore the<br/>business value a partnership could bring to your warehouse.</p><br/>
         <Heading>Our ROI Indicators</Heading>
-        <p>Our ROI calculator takes into account 20+ unique factors to determine your estimated ROI when becoming a BarIQ customer!  It will consider your current expenses, profits, and warehouse size.</p>    
+        <p>Our ROI calculator takes into account 20+ unique factors to determine<br/>your estimated ROI when becoming a BarIQ customer!  It will<br/>consider your current expenses, profits, and warehouse size.</p>
         <LinkRows>     
             <Column>
                 <Link>• Percentage of product "mispicks"</Link>
@@ -76,12 +94,12 @@ function RoiPage() {
         </LinkRows>
         <Heading>Easy To Use</Heading>
         <p>Try it in 4 easy steps:</p>
-        <ol>
+        <OrderedList>
             <li>1. Enter budget</li>
             <li>2. Enter warehouse size</li>
             <li>3. Enter RFID expenses</li>
-        </ol>
-    </div>
+        </OrderedList>
+    </Wrapper>
   )
 }
 

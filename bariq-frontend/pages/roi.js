@@ -16,6 +16,8 @@ import RoiPage from "../components/RoiPage";
 
 const Container = styled.div`
   background: #e7edf2;
+  margin: 0 auto;
+  width: 100%;
 `;
 
 const Container2 = styled.div`
@@ -48,13 +50,17 @@ const RoiButton = styled.a`
   border-style: solid;
   border-width: 1.95px;
   transition: 0.5s;
-  text-color: black;
 
   &:hover {
     background: #2a81e5;
     color: #e7edf2;
   }
 `;
+
+const AWrapper = styled.a`
+  margin-bottom: 40px;
+`;
+
 export default function ROI() {
   // Navigation
   const router = useRouter();
@@ -93,9 +99,9 @@ export default function ROI() {
             <Container2>
               <RoiPage />
             </Container2>
-            <a href="/roi-calculator">
+            <AWrapper href="/roi-calculator">
               <RoiButton> Go To Calculator</RoiButton>
-            </a>
+            </AWrapper>
           </Centered>
         </Container>
       </Wrapper>
