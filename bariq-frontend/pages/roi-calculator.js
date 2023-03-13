@@ -29,7 +29,7 @@ const Title = styled.h1`
   text-align: center;
   font-size: 30px;
   height: 60px;
-  width: 100%;
+  width: 100vw;
   padding-top: 20px;
   padding-bottom: 100px;
   font-weight: bold;
@@ -39,26 +39,13 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
 `;
-const RoiButton = styled.a`
-  color: #e7edf2;
-  background: #1a1d4a;
-  font-size: 20px;
-  padding: 5px 13px;
-  border-radius: 200px;
-  border-color: #1a1d4a;
-  border-style: solid;
-  border-width: 1.95px;
-  transition: 0.5s;
-  text-color: black;
 
-  &:hover {
-    background: #2a81e5;
-    color: #e7edf2;
-  }
-`;
-export default function CALC() {
+export default function RoiCalculator() {
   // Navigation
   const router = useRouter();
+
+  // Form fields
+  const [fields, setFields] = useState(Array(25).fill(0))
 
   // Authentication
   initFirebase();
@@ -92,7 +79,7 @@ export default function CALC() {
             <Title>ROI Calculator Input Form</Title>
             <h2>We should probably write something here</h2>
             <Container2>
-              <RoiInput />
+              <RoiInput fields={fields} setFields={setFields} />
             </Container2>
           </Centered>
         </Container>
