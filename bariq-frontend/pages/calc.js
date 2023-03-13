@@ -90,7 +90,7 @@ export default function CALC() {
           <Navbar loggedIn={user} logout={logout} />
           <Centered>
             <Title>ROI Calculator Input Form</Title>
-            <h2>We should probably write something here</h2>
+            <h2></h2>
             <Container2>
               <RoiInput />
             </Container2>

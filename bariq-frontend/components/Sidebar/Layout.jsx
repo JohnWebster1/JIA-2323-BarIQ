@@ -34,7 +34,7 @@ const Layout = (props) => {
                 <Navbar loggedIn={props.loggedIn} logout={props.logOut}/>
                 <Title>Interactive Resource Portal</Title>
                 {props.loggedIn ? <Title>Welcome {props.loggedIn.displayName}! </Title> : <></>}
-                <div className='bg-secondary flex-1 p-4 text-black'>
+                <div className='bg-white flex-1 p-4 text-black'>
                   <Home/>
                 </div>
             </Container>

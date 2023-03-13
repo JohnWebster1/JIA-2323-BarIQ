@@ -22,8 +22,8 @@ const StyledLabel = styled.label`
 `;
 
 const Wrapper = styled.div`
-  max-width: 400px;
-  margin: 0 auto 20px;
+  max-width: auto;
+  margin: 0px auto 20px;
   text-align: center;
 `;
 
@@ -45,7 +45,7 @@ const StyledButton = styled.a`
   }
 `;
 
-const inputNames = [
+const inputNames1 = [
   "Percentage of product 'mispicks' (0-100)",
   "Number of warehouse workers",
   "Average compensation of warehouse workers ($)",
@@ -54,8 +54,9 @@ const inputNames = [
   "Percentage of order inaccuraces delivered to customers (0-100)",
   "Total sales for canned/bottled goods ($)",
   "Number of dock doors",
-  "Percentage rejected deliveries by the customer (0-100)",
   "Percentage of duplicates delivered to the customer (0-100)",
+];
+const inputNames2 = [
   "Average sales price of craft beer product",
   "Average sales price of high volume prduct",
   "Warehouse square footage",
@@ -63,6 +64,9 @@ const inputNames = [
   "Number of sales representatives",
   "Number of lost sales accounts over last 3 years",
   "Total number of delivery transportation drivers",
+  "Percentage rejected deliveries by the customer (0-100)",
+]
+const inputNames3 = [
   "Average compensation of delivery transportation drivers",
   "Average cost of gas in transportation region",
   "Average sales price of non-alcoholic product",
@@ -71,7 +75,7 @@ const inputNames = [
   "Number of current label printers in warehouse",
   "Number of current labels purchaed annually",
   "Number of interactive forklifts",
-];
+]
 
 function RoiInput(props) {
   const [showModal, setShowModal] = useState(false);
@@ -84,7 +88,7 @@ function RoiInput(props) {
     setShowModal(false);
   };
 
-  const inputs = inputNames.map((name, index) => (
+  const inputs1 = inputNames1.map((name, index) => (
     <div key={index}>
       <StyledLabel>{name}</StyledLabel>
       <StyledInput
@@ -95,9 +99,45 @@ function RoiInput(props) {
       />
     </div>
   ));
+  const inputs2 = inputNames2.map((name, index) => (
+    <div key={index}>
+      <StyledLabel>{name}</StyledLabel>
+      <StyledInput
+        type={"number"}
+        required={true}
+        value={props.value}
+        onChange={props.onChange}
+      />
+    </div>
+  ));
+  const inputs3 = inputNames3.map((name, index) => (
+    <div key={index}>
+      <StyledLabel>{name}</StyledLabel>
+      <StyledInput
+        type={"number"}
+        required={true}
+        value={props.value}
+        onChange={props.onChange}
+      />
+    </div>
+  ));
+
+  const RoiFieldRows = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 45px 290px 0px;
+  min-width: 100vw;
+`;
+
   return (
     <Wrapper>
-      <form>{inputs}</form>
+      <RoiFieldRows>
+        <form>{inputs1}</form>
+        <form>{inputs2}</form>
+        <form>{inputs3}</form>
+      </RoiFieldRows>
+      
       <div>
         <Centered>
           <StyledButton onClick={handleOpenModal}>Click Me</StyledButton>
