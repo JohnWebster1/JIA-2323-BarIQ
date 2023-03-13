@@ -7,8 +7,6 @@ import Navbar from "./Navbar";
 import Centered from "./Centered";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {getArticles} from "../util/getArticles";
-import Layout from "./Sidebar/Layout";
-import React from 'react';
 
 
 
