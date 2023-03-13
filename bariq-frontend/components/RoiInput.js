@@ -37,7 +37,6 @@ const StyledButton = styled.a`
   border-style: solid;
   border-width: 1.95px;
   transition: 0.5s;
-  text-color: black;
 
   &:hover {
     background: #2a81e5;
@@ -77,6 +76,9 @@ function RoiInput(props) {
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => {
+    console.log(props.fields);
+    // props.fields is an array of 25 integers
+    // TODO in the future: use the array to calculate the ROI
     setShowModal(true);
   };
 
@@ -91,10 +93,15 @@ function RoiInput(props) {
         type={"number"}
         required={true}
         value={props.value}
-        onChange={props.onChange}
+        onChange={(event) => {
+          const fields = props.fields
+          fields[index] = parseInt(event.target.value)
+          props.setFields([...fields])
+        }}
       />
     </div>
   ));
+
   return (
     <Wrapper>
       <form>{inputs}</form>
