@@ -3,18 +3,17 @@ import * as React from "react";
 function HomeIcon({ fill = "#white", ...rest }) {
   return (
     <svg
-      width={24}
-      height={24}
-      viewBox="0 0 24 24"
-      fill="white"
-      stroke="white"
       xmlns="http://www.w3.org/2000/svg"
-      {...rest}
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="white"
+      className="w-6 h-6"
     >
       <path
-        d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1.001 1.001 0 00.707-1.707l-9-9a1 1 0 00-1.414 0l-9 9A1 1 0 003 13zm7 7v-5h4v5h-4zm2-15.586l6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"
-        fill={fill}
-        strokeWidth=".2px"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
       />
     </svg>
   );

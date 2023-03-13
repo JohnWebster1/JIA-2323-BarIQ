@@ -42,7 +42,12 @@ const Wrapper = styled.div`
 
 const FilterWrapper = styled.div`
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  background: #d9dee1;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+  height: fit-content;
 `
 
 const FilterList = styled.ul`

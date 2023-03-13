@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import LogoutIcon from "./sidebar-icons";
 
 const Nav = styled.nav`
   background: #1A1D6A;
