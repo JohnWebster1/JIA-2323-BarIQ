@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function VideosIcon({ fill = "#6C7281", ...rest }) {
+function VideosIcon({ fill = "#white", ...rest }) {
   return (
     <svg
       width={24}
@@ -8,6 +8,7 @@ function VideosIcon({ fill = "#6C7281", ...rest }) {
       fill="none"
       viewBox="0 0 24 24"
       stroke="white"
+      size="100px"
       xmlns="http://www.w3.org/2000/svg"
       {...rest}
     >

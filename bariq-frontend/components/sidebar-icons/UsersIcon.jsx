@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function UsersIcon({ stroke = "#6C7281", ...rest }) {
+function UsersIcon({ stroke = "#white", ...rest }) {
   return (
     <svg
       width={24}
