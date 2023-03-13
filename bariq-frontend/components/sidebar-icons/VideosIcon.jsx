@@ -5,7 +5,7 @@ function VideosIcon({ fill = "#white", ...rest }) {
     <svg
       width={24}
       height={24}
-      fill="none"
+      fill="white"
       viewBox="0 0 24 24"
       stroke="white"
       size="100px"
