@@ -5,7 +5,8 @@ function CollapsIcon({ fill = "#6C7281", ...rest }) {
     <svg
       width={16}
       height={15}
-      fill="none"
+      fill="white"
+      stroke="white"
       xmlns="http://www.w3.org/2000/svg"
       {...rest}
     >

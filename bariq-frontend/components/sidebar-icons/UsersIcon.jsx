@@ -7,6 +7,7 @@ function UsersIcon({ stroke = "#6C7281", ...rest }) {
       height={24}
       fill="none"
       viewBox="0 0 24 24"
+      stroke="white"
       xmlns="http://www.w3.org/2000/svg"
       {...rest}
     >
