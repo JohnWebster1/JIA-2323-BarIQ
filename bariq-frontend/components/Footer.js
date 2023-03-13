@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
   background: #1a1d6a;
-  min-width: 100vw;
+  width: 100%;
 `;
 
 const ImageWrapper = styled.div`

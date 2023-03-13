@@ -6,48 +6,74 @@ const Heading = styled.h1`
   background:  #E7EDF2;
   font-size: 20px;
   height: 60px;
-  width: 95vw;
   font-weight: bold;
   color: #1b93d2;
   padding-top: 20px;
-  padding-bottom: 50px;
-  margin: 0px 0px 0px 0px;
+  padding-bottom: 20px;
+  margin: 0;
 `;
-
 
 const LinkRows = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 45px 250px 50px;
-  min-width: 100vw;
+  padding: 45px 0 10px;
+  width: 100%;
+  margin: 0 auto;
 `;
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  background: #d9dce3;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 10px;
+  max-width: 250px;
 `;
 
 const Link = styled.a`
   font-size: 1.0rem;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   display: inline-block;
   text-decoration: none;
-  color: #black;
+  color: black;
   &:hover {
     color: #1b93d2;
   }
 `;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+const OrderedList = styled.ol`
+  margin-bottom: 20px;
+  max-width: 1000px;
+  align-content: start;
+  text-align: start;
+  list-style-type: upper-roman;
+`;
+
+const ListItem = styled.li`
+  margin-bottom: 10px;
+`
+
 function RoiPage() {
   return (
-    <div>
+    <Wrapper>
         <Heading>Understanding your ROI</Heading>
-        <p>Return on investment (ROI) can be used to determine the profitability associated with capital expenditures for your warehouse. </p>
-        <p>Bar IQ offers this tool to help you explore the business value a partnership could bring to your warehouse.</p>
+        <p>Return on investment (ROI) can be used to determine<br/>the profitability associated with capital expenditures for your warehouse.</p>
+        <br/>
+        <p>Bar IQ offers this tool to help you explore the<br/>business value a partnership could bring to your warehouse.</p><br/>
         <Heading>Our ROI Indicators</Heading>
-        <p>Our ROI calculator takes into account 20+ unique factors to determine your estimated ROI when becoming a BarIQ customer!  It will consider your current expenses, profits, and warehouse size.</p>    
+        <p>Our ROI calculator takes into account 20+ unique factors to determine<br/>your estimated ROI when becoming a BarIQ customer!  It will<br/>consider your current expenses, profits, and warehouse size. </p>
         <LinkRows>     
             <Column>
                 <Link>• Percentage of product "mispicks"</Link>
@@ -74,14 +100,16 @@ function RoiPage() {
                 <Link>• Average sales price of craft beer product</Link>
             </Column>
         </LinkRows>
-        <Heading>Easy To Use</Heading>
-        <p>Try it in 4 easy steps:</p>
-        <ol>
-            <li>1. Enter budget</li>
-            <li>2. Enter warehouse size</li>
-            <li>3. Enter RFID expenses</li>
-        </ol>
-    </div>
+        <Heading>Why ROI Calculation?</Heading>
+        <OrderedList>
+            <ListItem>Helps with investment decision-making: Beer warehouses can use ROI calculations to evaluate the profitability of investing in new equipment, technology, or facilities. By assessing the expected ROI of different investment options, warehouses can prioritize those with the highest potential return.</ListItem>
+            <ListItem>Enables better inventory management: Beer warehouses can use ROI calculations to evaluate the profitability of carrying certain beer brands, types, or volumes. By analyzing the ROI of different inventory options, warehouses can optimize their inventory management and ensure they are carrying the most profitable beers.</ListItem>
+            <ListItem>Facilitates cost management: Beer warehouses can use ROI calculations to assess the financial impact of various operational costs, such as transportation, storage, or labor costs. By tracking the ROI of different cost-saving initiatives, warehouses can prioritize those that are most effective and efficient.</ListItem>
+            <ListItem>Helps with performance benchmarking: ROI calculations can help beer warehouses benchmark their performance against industry standards or competitors. By comparing their ROI to that of their competitors, warehouses can identify areas where they may be falling behind and take steps to improve their performance.</ListItem>
+            <ListItem>Enables better pricing decisions: Beer warehouses can use ROI calculations to determine the profitability of different pricing strategies. By assessing the ROI of various pricing options, warehouses can optimize their pricing decisions and ensure they are maximizing profitability.</ListItem>
+
+        </OrderedList>
+    </Wrapper>
   )
 }
 
