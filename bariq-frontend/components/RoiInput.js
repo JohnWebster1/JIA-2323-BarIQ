@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import Modal from "react-modal";
 import Centered from "./Centered";
+import {saveRoiFields} from "../util/firebaseRoi";
 
 Modal.setAppElement("#__next");
 
@@ -79,7 +80,9 @@ function RoiInput(props) {
     console.log(props.fields);
     // props.fields is an array of 25 integers
     // TODO in the future: use the array to calculate the ROI
-    setShowModal(true);
+    saveRoiFields(props.fields).then(() => {
+      setShowModal(true)
+    });
   };
 
   const handleCloseModal = () => {
