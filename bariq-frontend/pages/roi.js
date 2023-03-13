@@ -93,7 +93,7 @@ export default function ROI() {
             <Container2>
               <RoiPage />
             </Container2>
-            <a href="/roi-calculator.js">
+            <a href="/roi-calculator">
               <RoiButton> Go To Calculator</RoiButton>
             </a>
           </Centered>
