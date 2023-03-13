@@ -9,15 +9,26 @@ const Container = styled.div`
   width: 100%;
 `;
 const Title = styled.h1`
-  background: white;
-  text-align: right;
-  font-size: 30px;
-  font-family: normal 400;
-  height: 60px;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 15px;
+background: #e7edf2;
+text-align: center;
+font-size: 40px;
+height: 60px;
+width: 100%;
+padding-top: 10px;
+padding-bottom: 10px;
+font-weight: bold;
+color: #1b93d2;
+`;
+const Title2 = styled.h1`
+background: #e7edf2;
+text-align: center;
+font-size: 20px;
+height: 60px;
+width: 100%;
+padding-top: 10px;
+padding-bottom: 10px;
+font-weight: bold;
+color: #1b93d2;
 `;
 
 const Wrapper = styled.div`
@@ -33,7 +44,7 @@ const Layout = (props) => {
             <Container>
                 <Navbar loggedIn={props.loggedIn} logout={props.logOut}/>
                 <Title>Interactive Resource Portal</Title>
-                {props.loggedIn ? <Title>Welcome {props.loggedIn.displayName}! </Title> : <></>}
+                {props.loggedIn ? <Title2>Welcome {props.loggedIn.displayName}! </Title2> : <></>}
                 <div className='bg-secondary flex-1 p-4 text-black'>
                   <Home/>
                 </div>

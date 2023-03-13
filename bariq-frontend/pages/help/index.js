@@ -19,13 +19,15 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  background:  #E7EDF2;
-  text-align: center;
-  font-size: 20px;
-  height: 60px;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+background: #e7edf2;
+text-align: center;
+font-size: 30px;
+height: 60px;
+width: 100%;
+padding-top: 10px;
+padding-bottom: 10px;
+font-weight: bold;
+color: #1b93d2;
 `;
 const Wrapper = styled.div`
   display: flex;
