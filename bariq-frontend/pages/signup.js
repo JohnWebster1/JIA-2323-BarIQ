@@ -73,7 +73,7 @@ export default function Signup() {
                 href={"/login"}
                 topText={"Already have an account?"}
                 topButtonText={"Log In"}
-                headerText={"Welcome to BarIQ!"}
+                headerText={"Welcome to Bar IQ!"}
                 headerSubText={"Get started by creating an account."}
                 useName={true}
                 buttonText={"Sign Up"}

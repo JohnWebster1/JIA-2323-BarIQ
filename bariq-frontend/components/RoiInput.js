@@ -23,8 +23,7 @@ const StyledLabel = styled.label`
 `;
 
 const Wrapper = styled.div`
-  max-width: auto;
-  margin: 10px auto 50px;
+  margin: 0 auto 50px;
   text-align: center;
 `;
 
@@ -43,7 +42,16 @@ const StyledButton = styled.a`
   &:hover {
     background: #2a81e5;
     color: #e7edf2;
+    cursor: pointer;
   }
+`;
+
+const CloseButton = styled(StyledButton)`
+  padding: 8px 19px;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 40px;
+  left: 44vw;
 `;
 
 const inputNames1 = [
@@ -77,6 +85,19 @@ const inputNames3 = [
   "Number of current labels purchaed annually",
   "Number of interactive forklifts",
 ]
+
+const ModalWrapper = styled.div`
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30vh;
+`;
+
+const ModalText = styled.h3`
+  padding-bottom: 10px;
+  font-size: 2rem;
+`
 
 function RoiInput(props) {
   const [showModal, setShowModal] = useState(false);
@@ -132,7 +153,7 @@ function RoiInput(props) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 45px 290px 0px;
+  padding: 20px 290px 0px;
   min-width: 100vw;
 `;
   const FieldColumn = styled.div`
@@ -157,10 +178,12 @@ function RoiInput(props) {
         <Centered>
           <StyledButton onClick={handleOpenModal}>Calculate</StyledButton>
           <Modal isOpen={showModal} onRequestClose={handleCloseModal}>
-            <p>1st Year ROI: $275,000</p>
-            <p>2nd Year ROI: $582,000</p>
-            <p>3rd Year ROI: $1,197,000</p>
-            <StyledButton onClick={handleCloseModal}>Close</StyledButton>
+            <ModalWrapper>
+              <ModalText>1st Year ROI: $275,000</ModalText>
+              <ModalText>2nd Year ROI: $582,000</ModalText>
+              <ModalText>3rd Year ROI: $1,197,000</ModalText>
+              <CloseButton onClick={handleCloseModal}>Close</CloseButton>
+            </ModalWrapper>
           </Modal>
         </Centered>
       </div>

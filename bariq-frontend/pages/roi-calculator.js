@@ -31,7 +31,6 @@ const Title = styled.h1`
   height: 60px;
   width: 100vw;
   padding-top: 20px;
-  padding-bottom: 100px;
   font-weight: bold;
   color: #1b93d2;
 `;
@@ -77,7 +76,6 @@ export default function RoiCalculator() {
           <Navbar loggedIn={user} logout={logout} />
           <Centered>
             <Title>ROI Calculator Input Form</Title>
-            <h2>We should probably write something here</h2>
             <Container2>
               <RoiInput fields={fields} setFields={setFields} />
             </Container2>
