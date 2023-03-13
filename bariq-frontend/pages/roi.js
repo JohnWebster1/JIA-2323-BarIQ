@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { initFirebase } from "../util/firebaseApp";
 import { getAuth } from "firebase/auth";
 import { useRouter } from "next/router";
@@ -13,7 +13,6 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import RoiPage from "../components/RoiPage";
-
 
 const Container = styled.div`
   background: #e7edf2;
@@ -41,35 +40,29 @@ const Wrapper = styled.div`
 `;
 const RoiButton = styled.a`
   color: #e7edf2;
-  background: #1A1D4A;
+  background: #1a1d4a;
   font-size: 20px;
   padding: 5px 13px;
   border-radius: 200px;
-  border-color: #1A1D4A;
+  border-color: #1a1d4a;
   border-style: solid;
   border-width: 1.95px;
-  transition: .5s;
+  transition: 0.5s;
   text-color: black;
 
   &:hover {
     background: #2a81e5;
-    color: #E7EDF2;
+    color: #e7edf2;
   }
 `;
 export default function ROI() {
   // Navigation
   const router = useRouter();
-  
+
   // Authentication
   initFirebase();
   const auth = getAuth();
   const [user, loading] = useAuthState(auth);
-  
-
-
-
-
-
 
   if (loading) {
     return <div>Loading...</div>;
@@ -87,21 +80,22 @@ export default function ROI() {
     <div>
       <Head>
         <title>Bar IQ | ROI Calculator</title>
-        <meta name="description" content="The ROI page for Bar IQ."/>
-        <link rel="icon" href="../public/favicon.ico"/>
+        <meta name="description" content="The ROI page for Bar IQ." />
+        <link rel="icon" href="../public/favicon.ico" />
       </Head>
 
       <Wrapper>
         <Sidebar />
         <Container>
           <Navbar loggedIn={user} logout={logout} />
-          <Centered> 
+          <Centered>
             <Title>ROI Calculator</Title>
             <Container2>
-              <RoiPage/>
+              <RoiPage />
             </Container2>
-            <RoiButton> Go To Calculator</RoiButton>
-
+            <a href="/calc">
+              <RoiButton> Go To Calculator</RoiButton>
+            </a>
           </Centered>
         </Container>
       </Wrapper>
