@@ -115,6 +115,12 @@ function RoiInput(props) {
     setShowModal(false);
   };
 
+  const onChange = (event, index) => {
+    let fields = props.fields
+    fields[index] = parseInt(event.target.value)
+    // props.setFields([...fields])
+  }
+
   const inputs1 = inputNames1.map((name, index) => (
     <div key={index}>
       <StyledLabel>{name}</StyledLabel>
@@ -122,7 +128,7 @@ function RoiInput(props) {
         type={"number"}
         required={true}
         value={props.value}
-        onChange={props.onChange}
+        onChange={(event) => onChange(event, index)}
       />
     </div>
   ));
@@ -133,7 +139,7 @@ function RoiInput(props) {
         type={"number"}
         required={true}
         value={props.value}
-        onChange={props.onChange}
+        onChange={(event) => onChange(event, index + 9)}
       />
     </div>
   ));
@@ -144,7 +150,7 @@ function RoiInput(props) {
         type={"number"}
         required={true}
         value={props.value}
-        onChange={props.onChange}
+        onChange={(event) => onChange(event, index + 18)}
       />
     </div>
   ));
