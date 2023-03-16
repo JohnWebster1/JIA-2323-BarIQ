@@ -33,6 +33,11 @@ const ArticlePreview = styled.p`
   font-size: 1rem;
 `;
 
+const BlankArticlePreview = styled(ArticlePreview)`
+  color: transparent;
+  user-select: none;
+`;
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -86,6 +91,16 @@ function ArticleComponent(props) {
     let [selectedCategories, setSelectedCategories] = useState(new Set());
     let items = []
     let articleToCategories = new Map();
+    if (data.size === 0) {
+        items.push(
+            <div>
+                <ArticleItem>
+                    <ArticleTitle>No articles found</ArticleTitle>
+                    <BlankArticlePreview>As a beer warehouse distributor, managing your inventory efficiently can be a daunting task. However, with Bar IQ, our state-of-the-art beer inventory management software, you can streamline your inve...</BlankArticlePreview>
+                </ArticleItem>
+            </div>
+        )
+    }
     data.forEach((value, key) => {
         articleToCategories.set(key, value.categories);
         items.push(<div key={key} onClick={() => {
