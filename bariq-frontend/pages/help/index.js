@@ -46,12 +46,14 @@ export default function Index() {
     // Get articles
     const [originalData, setOriginalData] = useState(new Map());
     const [articlesComponent, setArticlesComponent] = useState(<>Loading...</>);
+    const [categories, setCategories] = useState(new Map());
     useEffect(() => {
-        getCategories().then((categories) => {
+        getCategories().then((cat) => {
+            setCategories(cat)
             getArticles().then((data) => {
                 if (data !== undefined) {
                     setOriginalData(data);
-                    setArticlesComponent(<Articles data={data} router={router} categories={categories}/>);
+                    setArticlesComponent(<Articles data={data} router={router} categories={cat}/>);
                 }
             });
         });
@@ -104,7 +106,7 @@ export default function Index() {
                                     });
                                 }
                                 setArticlesComponent(
-                                    <Articles data={tempData} router={router}/>
+                                    <Articles data={tempData} router={router} categories={categories}/>
                                 );
                             }}
                         />
