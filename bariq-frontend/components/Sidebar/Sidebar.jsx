@@ -27,22 +27,22 @@ import styled from "styled-components";
 
 const menuItems = [
   { id: 1, label: "Dashboard", icon: HomeIcon, link: "/" },
-  { id: 2, label: "FAQs", icon: ArticleIcon, link: "/help" },
+  { id: 2, label: "FAQs", icon: ArticleIcon, link: "/faq" },
   { id: 3, label: "RFID Search Engine", icon: SearchIcon, link: "/help" },
-  { id: 4, label: "Video Modules", icon: VideosIcon, link: "/help" },
-  { id: 5, label: "Floor Plan Generator", icon: BuildingIcon, link: "/help" },
-  { id: 6, label: "Community", icon: UsersIcon, link: "/help" },
+  { id: 4, label: "Video Modules", icon: VideosIcon, link: "/modules" },
+  { id: 5, label: "Floor Plan Generator", icon: BuildingIcon, link: "/floor" },
+  { id: 6, label: "Community", icon: UsersIcon, link: "/community" },
   { id: 7, label: "ROI Calculator", icon: CalcIcon, link: "/roi" },
-  { id: 8, label: "Chat", icon: ChatIcon, link: "/help" },
-  { id: 9, label: "Equipment Supplier Map", icon: MapIcon, link: "/help" },
-  { id: 10, label: "Project Status Tool", icon: ToolIcon, link: "/help" },
-  { id: 11, label: "My IoT", icon: InfoIcon, link: "/help" },
-  { id: 12, label: "Documents", icon: DocumentIcon, link: "/help" },
-  { id: 13, label: "Machine Vision", icon: EyeIcon, link: "/help" },
-  { id: 14, label: "Support Desk", icon: SupportIcon, link: "/help" },
-  { id: 15, label: "Equipment Log", icon: ClipIcon, link: "/help" },
-  { id: 16, label: "Billing", icon: BillIcon, link: "/help" },
-  { id: 17, label: "E-store", icon: StoreIcon, link: "/help" },
+  { id: 8, label: "Chat", icon: ChatIcon, link: "/chat" },
+  { id: 9, label: "Equipment Supplier Map", icon: MapIcon, link: "/map" },
+  { id: 10, label: "Project Status Tool", icon: ToolIcon, link: "/tool" },
+  { id: 11, label: "My IoT", icon: InfoIcon, link: "/iot" },
+  { id: 12, label: "Documents", icon: DocumentIcon, link: "/docs" },
+  { id: 13, label: "Machine Vision", icon: EyeIcon, link: "/vision" },
+  { id: 14, label: "Support Desk", icon: SupportIcon, link: "/support" },
+  { id: 15, label: "Equipment Log", icon: ClipIcon, link: "/equipment" },
+  { id: 16, label: "Billing", icon: BillIcon, link: "/billing" },
+  { id: 17, label: "E-store", icon: StoreIcon, link: "/store" },
 ];
 
 const Sidebar = () => {
@@ -89,7 +89,7 @@ const Sidebar = () => {
   };
 
   const LogoWrapper = styled.div`
-    background: #1A1D6A;
+    background: #1a1d6a;
     position: absolute;
     left: 0;
     top: 0;
@@ -152,9 +152,7 @@ const Sidebar = () => {
                     </div>
                     {!toggleCollapse && (
                       <span
-                        className={classNames(
-                          "text-md font-medium text-white"
-                        )}
+                        className={classNames("text-md font-medium text-white")}
                       >
                         {menu.label}
                       </span>
