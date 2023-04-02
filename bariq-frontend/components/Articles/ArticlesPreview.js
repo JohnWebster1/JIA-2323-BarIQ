@@ -66,7 +66,9 @@ const FilterItem = styled.li`
 `
 
 const FilterLabel = styled.label`
-    margin-left: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  user-select: none;
 `;
 
 const FilterTitle = styled.h2`
