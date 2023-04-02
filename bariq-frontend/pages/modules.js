@@ -19,9 +19,33 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const Container2 = styled.div`
-  background: #e7edf2;
+const Columns = styled.div`
+  display: flex;
+  flex-direction: row;
+  
+`
+
+const VideosWrapper = styled.div`
+  margin-top: 20px;
   width: auto;
+`;
+
+const VideoCSS = styled.iframe`
+  margin-bottom: 50px;
+  width: 560px;
+  height: 315px;
+  
+  // max width 900px
+  @media (max-width: 768px) {
+    width: 373px;
+    height: 210px;
+  }
+`
+
+const CategoriesHeader = styled.h2`
+  color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
 `;
 
 const Title = styled.h1`
@@ -39,7 +63,42 @@ const Wrapper = styled.div`
   flex-direction: row;
 `;
 
-export default function ROI() {
+const FilterWrapper = styled.div`
+  font-size: 16px;
+  background: #d9dee1;
+  padding: 20px;
+  border-radius: 20px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25vh;
+  left: 15vw;
+`
+
+const FilterList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`
+
+const FilterItem = styled.li`
+  margin-bottom: 5px;
+`
+
+const FilterLabel = styled.label`
+  margin-left: 10px;
+  cursor: pointer;
+  user-select: none;
+`;
+
+const FilterTitle = styled.h2`
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+`
+
+export default function modules() {
   // Navigation
   const router = useRouter();
 
@@ -47,6 +106,14 @@ export default function ROI() {
   initFirebase();
   const auth = getAuth();
   const [user, loading] = useAuthState(auth);
+  let [selectedCategories, setSelectedCategories] = useState(new Set());
+  let videoToCategories = new Map();
+
+  // Videos
+  const videos = [
+    new Video('Test Title', "https://www.youtube.com/embed/J1U1h_EjkPs", [0,1,2]),
+    new Video('Cool AI Video', "https://www.youtube.com/embed/nYqeHIRKboM", [3])
+  ]
 
   if (loading) {
     return <div>Loading...</div>;
@@ -60,6 +127,35 @@ export default function ROI() {
     });
   };
 
+  const categories = ['Category 0', 'Category 1', 'Category 2', 'Category 3']
+  const categoriesCSS = []
+  categories.forEach((value, index) => {
+    categoriesCSS.push(<FilterItem key={index}>
+      <input type="checkbox" id={index.toString()} name={value} value={value} onChange={(event) => {
+        const newSet = new Set(selectedCategories);
+        if (event.target.checked) {
+          newSet.add(parseInt(event.target.id));
+        } else {
+          newSet.delete(parseInt(event.target.id));
+        }
+        setSelectedCategories(newSet);
+      }}/>
+      <FilterLabel htmlFor={index.toString()}>{value}</FilterLabel>
+    </FilterItem>)
+  })
+
+  const videosCSS = []
+  videos.forEach((video, index) => {
+    videosCSS.push(<div key={index}>
+      <CategoriesHeader>{video.title}</CategoriesHeader>
+      <VideoCSS src={video.url}
+                title={video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen></VideoCSS>
+    </div>)
+    videoToCategories.set(index, video.categoryIndices)
+  })
+
   return (
     <div>
       <Head>
@@ -72,15 +168,45 @@ export default function ROI() {
         <Sidebar />
         <Container>
           <Navbar loggedIn={user} logout={logout} />
-          <Centered>
-            <Title>Video Modules</Title>
-            <Container2>
-              {/* This is where we can make a component page for  */}
-            </Container2>
-          </Centered>
+          <Columns>
+            <FilterWrapper>
+              <FilterList>
+                <FilterTitle>Filter by Category</FilterTitle>
+                {categoriesCSS}
+              </FilterList>
+            </FilterWrapper>
+            <Centered>
+              <Title>Video Modules</Title>
+              <VideosWrapper>
+                {videosCSS.filter(item => {
+                  if (selectedCategories.size === 0) {
+                    return true;
+                  }
+                  const videoCategories = videoToCategories.get(parseInt(item.key))
+                  let result = false;
+                  selectedCategories.forEach(id1 => {
+                    videoCategories.forEach(id2 => {
+                      if (id1 === id2) {
+                        result = true;
+                      }
+                    });
+                  });
+                  return result;
+                })}
+              </VideosWrapper>
+            </Centered>
+          </Columns>
         </Container>
       </Wrapper>
       <Footer />
     </div>
   );
+}
+
+class Video {
+  constructor(title, url, categoryIndices) {
+    this.title = title;
+    this.url = url;
+    this.categoryIndices = categoryIndices;
+  }
 }
