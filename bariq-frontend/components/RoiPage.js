@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Heading = styled.h1`
   background:  #E7EDF2;
-  font-size: 20px;
+  font-size: 23px;
   height: 60px;
   font-weight: bold;
   color: #1b93d2;
@@ -26,8 +26,9 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  background: #d9dce3;
+  background: #FAF9F6;
   padding: 10px;
+  border: 2px solid;
   border-radius: 10px;
   margin: 0 10px;
   max-width: 250px;
@@ -69,11 +70,10 @@ function RoiPage() {
   return (
     <Wrapper>
         <Heading>Understanding your ROI</Heading>
-        <p>Return on investment (ROI) can be used to determine<br/>the profitability associated with capital expenditures for your warehouse.</p>
-        <br/>
-        <p>Bar IQ offers this tool to help you explore the<br/>business value a partnership could bring to your warehouse.</p><br/>
+        <p>Return on investment (ROI) can be used to determine the<br/> profitability associated with capital expenditures for your warehouse.</p><br/>
+        <p>Bar IQ offers this tool to help you explore the business<br/> value a partnership could bring to your warehouse.</p><br/>
         <Heading>Our ROI Indicators</Heading>
-        <p>Our ROI calculator takes into account 20+ unique factors to determine<br/>your estimated ROI when becoming a Bar IQ customer!  It will<br/>consider your current expenses, profits, and warehouse size. </p>
+        <p>Our ROI calculator takes into account 20+ unique factors to <br/>determine your estimated ROI when becoming a Bar IQ customer!<br/>It will consider your current expenses, profits, and warehouse size. </p>
         <LinkRows>     
             <Column>
                 <Link>• Percentage of product "mispicks"</Link>
