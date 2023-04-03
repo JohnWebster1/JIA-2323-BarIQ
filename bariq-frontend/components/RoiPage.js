@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Heading = styled.h1`
   background:  #E7EDF2;
-  font-size: 20px;
+  font-size: 23px;
   height: 60px;
   font-weight: bold;
   color: #1b93d2;
@@ -26,8 +26,9 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  background: #d9dce3;
+  background: #FAF9F6;
   padding: 10px;
+  border: 2px solid;
   border-radius: 10px;
   margin: 0 10px;
   max-width: 250px;
