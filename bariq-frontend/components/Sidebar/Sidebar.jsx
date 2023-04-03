@@ -89,7 +89,7 @@ const Sidebar = () => {
   };
 
   const LogoWrapper = styled.div`
-    background: #1a1d6a;
+    background: #132f43;
     position: absolute;
     left: 0;
     top: 0;
@@ -104,7 +104,7 @@ const Sidebar = () => {
       onMouseEnter={onMouseOver}
       onMouseLeave={onMouseOver}
       style={{
-        background: "#1A1D6A",
+        background: "#132f43",
         transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s",
         height: "auto",
       }}

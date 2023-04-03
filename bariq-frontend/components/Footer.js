@@ -2,7 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
-  background: #1a1d6a;
+  background: #132f43;
   width: 100%;
 `;
 
@@ -41,7 +41,7 @@ const Link = styled.a`
   color: #f0f0f0;
   &:hover {
     text-decoration: underline;
-    color: #1b93d2;
+    font-size: 1.055rem;
   }
 `;
 
