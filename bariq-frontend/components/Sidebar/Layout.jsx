@@ -9,16 +9,21 @@ const Container = styled.div`
   width: 100%;
 `;
 const Title = styled.h1`
-background: #e7edf2;
-text-align: center;
-font-size: 40px;
-height: 60px;
-width: 100%;
-padding-top: 10px;
-padding-bottom: 10px;
-font-weight: bold;
-color: #1b93d2;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1b41F2;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  padding: 2rem 1rem;
+  background-image: radial-gradient(circle at 30% 107%, #c5d5e5, #e7edf2 80%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.0);
 `;
+
 const Title2 = styled.h1`
 background: #e7edf2;
 text-align: center;
