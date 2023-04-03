@@ -70,11 +70,10 @@ function RoiPage() {
   return (
     <Wrapper>
         <Heading>Understanding your ROI</Heading>
-        <p>Return on investment (ROI) can be used to determine<br/>the profitability associated with capital expenditures for your warehouse.</p>
-        <br/>
-        <p>Bar IQ offers this tool to help you explore the<br/>business value a partnership could bring to your warehouse.</p><br/>
+        <p>Return on investment (ROI) can be used to determine the<br/> profitability associated with capital expenditures for your warehouse.</p><br/>
+        <p>Bar IQ offers this tool to help you explore the business<br/> value a partnership could bring to your warehouse.</p><br/>
         <Heading>Our ROI Indicators</Heading>
-        <p>Our ROI calculator takes into account 20+ unique factors to determine<br/>your estimated ROI when becoming a Bar IQ customer!  It will<br/>consider your current expenses, profits, and warehouse size. </p>
+        <p>Our ROI calculator takes into account 20+ unique factors to <br/>determine your estimated ROI when becoming a Bar IQ customer!<br/>It will consider your current expenses, profits, and warehouse size. </p>
         <LinkRows>     
             <Column>
                 <Link>• Percentage of product "mispicks"</Link>
