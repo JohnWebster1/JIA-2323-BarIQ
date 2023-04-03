@@ -45,6 +45,9 @@ const VideoCSS = styled.iframe`
 const CategoriesHeader = styled.h2`
   color: black;
   font-size: 1.25rem;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
   font-weight: bold;
 `;
 
@@ -68,12 +71,13 @@ const FilterWrapper = styled.div`
   background: #d9dee1;
   padding: 20px;
   border-radius: 20px;
+  margin: 10px;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 25vh;
-  left: 15vw;
+  position: flex;
+  top: 10vh;
+  left: 10vw;
 `
 
 const FilterList = styled.ul`
