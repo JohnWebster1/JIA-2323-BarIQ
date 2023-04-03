@@ -25,15 +25,13 @@ const Title = styled.h1`
 `;
 
 const Title2 = styled.h1`
-background: #e7edf2;
-text-align: center;
-font-size: 20px;
-height: 60px;
-width: 100%;
-padding-top: 10px;
-padding-bottom: 10px;
-font-weight: bold;
-color: #1b93d2;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1b41F2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 `;
 
 const Wrapper = styled.div`
