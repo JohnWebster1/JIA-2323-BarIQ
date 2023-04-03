@@ -25,15 +25,18 @@ const Container2 = styled.div`
 `;
 
 const Title = styled.h1`
-  background: #e7edf2;
   text-align: center;
-  font-size: 30px;
-  height: 60px;
-  width: 100%;
-  padding-top: 20px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 700;
   color: #1b93d2;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #1b93d2;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 `;
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;

@@ -3,7 +3,7 @@ export default function Home() {
     <div>
       {/* Home section 1 */}
       <section class="text-gray-600 body-font">
-        {/*<h1 class="sm:text-3xl text-2xl font-bold title-font text-center text-gray-900 mb-20">*/}
+        <h1 class="text-center text-gray-900 mb-20" style={{ fontSize: '2rem', fontWeight: 'bold', fontFamily: 'Helvetica Neue, sans-serif' }}>
         <h1
           class="text-center text-gray-900 mb-10"
           style={{
