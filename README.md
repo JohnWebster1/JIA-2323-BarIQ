@@ -7,13 +7,42 @@ We are working with Daniel Knotts, CTO of Bar IQ, LLC.
 [Licences under GNUv3 ](LICENSE.md)
 
 ## Release Notes
-### Version 0.1.0
 
+### Version 0.5.0: Next Release
 #### New Features
-* The Bar IQ Interactive Resource Portal now has a login screen with built in authentication so customers can save their account information and personalize their Bar IQ experience.
-* The Bar IQ Navigation Bar is up to date with ROI, Layout Builder, and FAQ pages. 
+* TBD
+* TBD
 
 #### Bug Fixes
+* TBD
+
+---
+
+### Version 0.4.0
+#### New Features
+* The Video Modules Page is now functional with drop down modules and associated YouTube videos.
+* All icons now have a main page that can be iterated upon for the future.
+
+#### Bug Fixes
+N/A
+
+#### Issues
+* Migrate Dashboard page JavaScript file from HTML based to React Component based.
+
+---
+
+### Version 0.3.0
+#### New Features
+* The Bar IQ ROI Calculator is now functional with an info and calculator page.
+* The ROI calculator page has 20+ input fields which Bar IQs ROI algorithm will run on once implmented.
+* The Search Engine page now has a UI panel with clickable checkboxes for the different filter categories.
+
+#### Bug Fixes
+* Fixed icons on the side navigation bar.
+* Fixed issue with ROI fields jumbling together when resizing window.
+* Fixed issue with main navigation bar and main window spilling over the right side of the screen.
+* Fixed ROI calculator results popup rendering incorrectly.
+* Fixed "learn more" buttons to navigate to the correct pages.
 
 ---
 
@@ -34,35 +63,11 @@ We are working with Daniel Knotts, CTO of Bar IQ, LLC.
 
 ---
 
-### Version 0.3.0
+### Version 0.1.0
+
 #### New Features
-* The Bar IQ ROI Calculator is now functional with an info and calculator page.
-* The ROI calculator page has 20+ input fields which Bar IQs ROI algorithm will run on once implmented.
-* The Search Engine page now has a UI panel with clickable checkboxes for the different filter categories.
-
-#### Bug Fixes
-* Fixed icons on the side navigation bar.
-* Fixed issue with ROI fields jumbling together when resizing window.
-* Fixed issue with main navigation bar and main window spilling over the right side of the screen.
-* Fixed ROI calculator results popup rendering incorrectly.
-* Fixed "learn more" buttons to navigate to the correct pages.
-
-
----
-### Version 0.4.0
-#### New Features
-* The Video Modules Page is now functional with drop down modules and associated YouTube videos.
-* All icons now have a main page that can be iterated upon for the future.
-
-#### Bug Fixes
-
----
-### Version 0.5.0: Next Release
-#### New Features
-* TBD
-* TBD
+* The Bar IQ Interactive Resource Portal now has a login screen with built in authentication so customers can save their account information and personalize their Bar IQ experience.
+* The Bar IQ Navigation Bar is up to date with ROI, Layout Builder, and FAQ pages. 
 
 #### Bug Fixes
 N/A
-
----
