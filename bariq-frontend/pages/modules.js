@@ -12,8 +12,6 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Collapsible from "react-collapsible";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCirclePlay} from "@fortawesome/free-solid-svg-icons";
 import {getVideoModules} from "../util/getVideos";
 import {useEffect, useState} from "react";
 
@@ -128,7 +126,7 @@ export default function modules() {
                     sectionVideos.push(
                         <button onClick={() => window.open(link, '_blank')}>
                             <Row>
-                                <FontAwesomeIcon icon={faCirclePlay} size={'1x'}/>
+                                {/*PLAY ICON GOES HERE*/}
                                 <VideoTitle>{titles[index]} • 1 min</VideoTitle>
                             </Row>
                         </button>
