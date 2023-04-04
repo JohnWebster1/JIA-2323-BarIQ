@@ -41,9 +41,7 @@ We are working with Daniel Knotts, CTO of Bar IQ, LLC.
 * The Search Engine page now has a UI panel with clickable checkboxes for the different filter categories.
 
 #### Bug Fixes
-* Updated styles and content of Dashboard page.
 * Fixed icons on the side navigation bar.
-* Updated styles and content of Footer section.
 * Fixed issue with ROI fields jumbling together when resizing window.
 * Fixed issue with main navigation bar and main window spilling over the right side of the screen.
 * Fixed ROI calculator results popup rendering incorrectly.
@@ -51,7 +49,15 @@ We are working with Daniel Knotts, CTO of Bar IQ, LLC.
 
 
 ---
-### Version 0.4.0: Next Release
+### Version 0.4.0
+#### New Features
+* The Video Modules Page is now functional with drop down modules and associated YouTube videos.
+* All icons now have a main page that can be iterated upon for the future.
+
+#### Bug Fixes
+
+---
+### Version 0.5.0: Next Release
 #### New Features
 * TBD
 * TBD
