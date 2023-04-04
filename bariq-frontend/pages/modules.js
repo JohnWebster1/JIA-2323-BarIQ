@@ -128,7 +128,7 @@ export default function modules() {
           sectionVideos.push(
             <button onClick={() => window.open(link, "_blank")}>
               <Row>
-                {PlayIcon}
+                <PlayIcon/>
                 <VideoTitle>{titles[index]} • 1 min</VideoTitle>
               </Row>
             </button>
