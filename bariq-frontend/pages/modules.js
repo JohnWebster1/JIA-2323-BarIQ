@@ -1,55 +1,28 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import { initFirebase } from "../util/firebaseApp";
-import { getAuth } from "firebase/auth";
-import { useRouter } from "next/router";
+import {initFirebase} from "../util/firebaseApp";
+import {getAuth} from "firebase/auth";
+import {useRouter} from "next/router";
 
 import Navbar from "../components/Navbar";
 import Centered from "../components/Centered";
 
-import { useAuthState } from "react-firebase-hooks/auth";
+import {useAuthState} from "react-firebase-hooks/auth";
 
 import Sidebar from "../components/Sidebar/Sidebar";
 import styled from "styled-components";
 import Footer from "../components/Footer";
+import Collapsible from "react-collapsible";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCirclePlay} from "@fortawesome/free-solid-svg-icons";
+import {getVideoModules} from "../util/getVideos";
+import {useEffect, useState} from "react";
 
 const Container = styled.div`
   background: #e7edf2;
   margin: 0 auto;
   width: 100%;
-`;
-
-const Columns = styled.div`
   display: flex;
-  flex-direction: row;
-  
-`
-
-const VideosWrapper = styled.div`
-  margin-top: 20px;
-  width: auto;
-`;
-
-const VideoCSS = styled.iframe`
-  margin-bottom: 50px;
-  width: 560px;
-  height: 315px;
-  
-  // max width 900px
-  @media (max-width: 768px) {
-    width: 373px;
-    height: 210px;
-  }
-`
-
-const CategoriesHeader = styled.h2`
-  color: black;
-  font-size: 1.25rem;
-  padding: 20px;
-  margin: 20px;
-  display: flex;
-  font-weight: bold;
-`;
+  flex-direction: column;
 
 const Title = styled.h1`
   background: #e7edf2;
@@ -60,157 +33,155 @@ const Title = styled.h1`
   padding-top: 20px;
   font-weight: bold;
   color: #1b93d2;
+  margin-bottom: 30px;
 `;
+
+const Subtitle = styled.h3`
+  text-align: center;
+  font-size: 18px;
+  width: 50vw;
+  padding: 20px;
+  color: black;
+  border: 1px solid #000;
+  background: white;
+  border-radius: 10px;
+`;
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
 `;
 
-const FilterWrapper = styled.div`
-  font-size: 16px;
-  background: #d9dee1;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 10px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  position: flex;
-  top: 10vh;
-  left: 10vw;
-`
-
-const FilterList = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-`
-
-const FilterItem = styled.li`
-  margin-bottom: 5px;
-`
-
-const FilterLabel = styled.label`
-  margin-left: 10px;
+const ExpandButton = styled.button`
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: bold;
   cursor: pointer;
-  user-select: none;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 `;
 
-const FilterTitle = styled.h2`
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 5px;
+const MyContent = styled.div`
+  background-color: white;
+  padding: 10px 10px 10px 25px;
+  font-size: 14px;
+  width: 50vw;
+  border: 1px solid #000;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const StyledCollapsible = styled(Collapsible)`
+  width: 50vw;
+`;
+
+const VideoTitle = styled.h2`
+    font-size: 16px;
+    margin-left: 10px;
+`;
+
+const FullModule = styled(VideoTitle)`
+  text-decoration: underline;
 `
 
 export default function modules() {
-  // Navigation
-  const router = useRouter();
+    // Navigation
+    const router = useRouter();
+    const [sectionsCSS, setSectionsCSS] = useState([]);
 
-  // Authentication
-  initFirebase();
-  const auth = getAuth();
-  const [user, loading] = useAuthState(auth);
-  let [selectedCategories, setSelectedCategories] = useState(new Set());
-  let videoToCategories = new Map();
 
-  // Videos
-  const videos = [
-    new Video('Test Title', "https://www.youtube.com/embed/J1U1h_EjkPs", [0,1,2]),
-    new Video('Cool AI Video', "https://www.youtube.com/embed/nYqeHIRKboM", [3])
-  ]
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  const logout = () => {
-    auth.signOut().then(() => {
-      if (!user) {
-        router.push("/");
-      }
-    });
-  };
-
-  const categories = ['Category 0', 'Category 1', 'Category 2', 'Category 3']
-  const categoriesCSS = []
-  categories.forEach((value, index) => {
-    categoriesCSS.push(<FilterItem key={index}>
-      <input type="checkbox" id={index.toString()} name={value} value={value} onChange={(event) => {
-        const newSet = new Set(selectedCategories);
-        if (event.target.checked) {
-          newSet.add(parseInt(event.target.id));
-        } else {
-          newSet.delete(parseInt(event.target.id));
-        }
-        setSelectedCategories(newSet);
-      }}/>
-      <FilterLabel htmlFor={index.toString()}>{value}</FilterLabel>
-    </FilterItem>)
-  })
-
-  const videosCSS = []
-  videos.forEach((video, index) => {
-    videosCSS.push(<div key={index}>
-      <CategoriesHeader>{video.title}</CategoriesHeader>
-      <VideoCSS src={video.url}
-                title={video.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen></VideoCSS>
-    </div>)
-    videoToCategories.set(index, video.categoryIndices)
-  })
-
-  return (
-    <div>
-      <Head>
-        <title>Bar IQ | Video Modules</title>
-        <meta name="description" content="The Video Modules page for Bar IQ." />
-        <link rel="icon" href="../public/favicon.ico" />
-      </Head>
-
-      <Wrapper>
-        <Sidebar />
-        <Container>
-          <Navbar loggedIn={user} logout={logout} />
-          <Columns>
-            <FilterWrapper>
-              <FilterList>
-                <FilterTitle>Filter by Category</FilterTitle>
-                {categoriesCSS}
-              </FilterList>
-            </FilterWrapper>
-            <Centered>
-              <Title>Video Modules</Title>
-              <VideosWrapper>
-                {videosCSS.filter(item => {
-                  if (selectedCategories.size === 0) {
-                    return true;
-                  }
-                  const videoCategories = videoToCategories.get(parseInt(item.key))
-                  let result = false;
-                  selectedCategories.forEach(id1 => {
-                    videoCategories.forEach(id2 => {
-                      if (id1 === id2) {
-                        result = true;
-                      }
+    // Sections
+    useEffect(() => {
+        getVideoModules().then((videoModulesMap) => {
+            let newSectionsCSS = [];
+            for (const section of videoModulesMap.keys()) {
+                const titles = videoModulesMap.get(section).titles
+                const links = videoModulesMap.get(section).links
+                const onClick = () => {
+                    router.push({
+                        pathname: '/full-module',
+                        query: { titles, links },
                     });
-                  });
-                  return result;
-                })}
-              </VideosWrapper>
-            </Centered>
-          </Columns>
-        </Container>
-      </Wrapper>
-      <Footer />
-    </div>
-  );
-}
+                }
 
-class Video {
-  constructor(title, url, categoryIndices) {
-    this.title = title;
-    this.url = url;
-    this.categoryIndices = categoryIndices;
-  }
+                const sectionVideos = [];
+                sectionVideos.push(<button onClick={onClick}>
+                    <FullModule>View Full Module</FullModule>
+                </button>)
+                links.forEach((link, index) => {
+                    sectionVideos.push(
+                        <button onClick={() => window.open(link, '_blank')}>
+                            <Row>
+                                <FontAwesomeIcon icon={faCirclePlay} size={'1x'}/>
+                                <VideoTitle>{titles[index]} • 1 min</VideoTitle>
+                            </Row>
+                        </button>
+                    );
+                });
+                newSectionsCSS.push(
+                    <StyledCollapsible id={section} trigger={<ExpandButton>{section}</ExpandButton>}>
+                        <MyContent>
+                            {sectionVideos}
+                        </MyContent>
+                    </StyledCollapsible>
+                );
+            }
+            setSectionsCSS(newSectionsCSS);
+        });
+    }, []);
+
+    // Authentication
+    initFirebase();
+    const auth = getAuth();
+    const [user, loading] = useAuthState(auth);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    const logout = () => {
+        auth.signOut().then(() => {
+            if (!user) {
+                router.push("/");
+            }
+        });
+    };
+
+    return (
+        <div>
+            <Head>
+                <title>Bar IQ | Video Modules</title>
+                <meta name="description" content="The Video Modules page for Bar IQ."/>
+                <link rel="icon" href="../public/favicon.ico"/>
+            </Head>
+
+            <Wrapper>
+                <Sidebar/>
+                <Container>
+                    <Navbar loggedIn={user} logout={logout}/>
+                    <Centered>
+                        <Title>Video Modules</Title>
+                        <Subtitle>This Video Modules page hosts educational videos designed to help individuals learn about the tools and services that Bar IQ offers. Below, you have a list of possible modules that you could engage in to start learning about the Bar IQ product. You can either click on the link provided under the module or navigate to the full module page. When you click on the link, you will be brought to the original page of the video. When you navigate to the full module page, you will be able to see all videos in the module embedded through the website such that you can interact as though you are on the original page of the video. Try to look through as many modules as possible!</Subtitle>
+                        {sectionsCSS}
+                    </Centered>
+                </Container>
+            </Wrapper>
+            <Footer/>
+        </div>
+    );
 }
