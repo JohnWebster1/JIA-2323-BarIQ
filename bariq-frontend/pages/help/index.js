@@ -21,11 +21,11 @@ const Container = styled.div`
 const Title = styled.h1`
 background: #e7edf2;
 text-align: center;
-font-size: 30px;
+font-size: 35px;
 height: 60px;
 width: 100%;
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 20px;
+padding-bottom: 90px;
 font-weight: bold;
 color: #1b93d2;
 `;
