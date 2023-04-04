@@ -54,7 +54,7 @@ const CategoriesHeader = styled.h2`
 const Title = styled.h1`
   background: #e7edf2;
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
   height: 60px;
   width: 100%;
   padding-top: 20px;
