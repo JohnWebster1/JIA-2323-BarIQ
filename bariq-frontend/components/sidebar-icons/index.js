@@ -18,3 +18,4 @@ export { default as BillIcon } from "./BillIcon";
 export { default as StoreIcon } from "./StoreIcon";
 export { default as ClipIcon } from "./ClipIcon";
 export { default as SupportIcon } from "./SupportIcon";
+export { default as PlayIcon } from "./PlayIcon";
