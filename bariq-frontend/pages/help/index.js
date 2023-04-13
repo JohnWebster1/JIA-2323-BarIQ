@@ -57,7 +57,7 @@ export default function Index() {
                 }
             });
         });
-    }, []);
+    }, [router]);
 
 
     if (loading) {

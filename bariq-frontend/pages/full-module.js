@@ -58,7 +58,12 @@ const Wrapper = styled.div`
   flex-direction: row;
 `;
 
-export default function modules() {
+export default function Modules() {
+    // Authentication
+    initFirebase();
+    const auth = getAuth();
+    const [user, loading] = useAuthState(auth);
+
     // Navigation
     const router = useRouter();
     let titles = router.query.titles;
@@ -79,11 +84,6 @@ export default function modules() {
             </VideosWrapper>
         </Centered>
     }
-
-    // Authentication
-    initFirebase();
-    const auth = getAuth();
-    const [user, loading] = useAuthState(auth);
 
     if (loading) {
         return <div>Loading...</div>;

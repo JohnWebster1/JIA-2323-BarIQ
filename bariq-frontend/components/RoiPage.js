@@ -76,7 +76,7 @@ function RoiPage() {
         <p>Our ROI calculator takes into account 20+ unique factors to <br/>determine your estimated ROI when becoming a Bar IQ customer!<br/>It will consider your current expenses, profits, and warehouse size. </p>
         <LinkRows>     
             <Column>
-                <Link>• Percentage of product "mispicks"</Link>
+                <Link>• Percentage of product &quot;mispicks&quot;</Link>
                 <Link>• Warehouse square footage</Link>
                 <Link>• Volume of product fulfillment by item</Link>
                 <Link>• Number of forklifts</Link>
