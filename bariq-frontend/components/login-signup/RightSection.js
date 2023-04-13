@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 
 const SwitchTextWrapper = styled.div`
   position: absolute;
@@ -122,7 +123,7 @@ function RightSection(props) {
     return (
         <>
             <LogoWrapper>
-                <a
+                <Link
                     href="/"
                 >
                     <Image
@@ -131,7 +132,7 @@ function RightSection(props) {
                         layout="fill"
                         objectFit="contain"
                     />
-                </a>
+                </Link>
             </LogoWrapper>
             <SwitchTextWrapper>
                 <SwitchSubtext>{props.topText}</SwitchSubtext>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div>
@@ -37,14 +39,12 @@ export default function Home() {
                     RFID sensors are electronic devices that use radio waves to
                     wirelessly identify the objects that you want to move.
                   </p>
-                  <a class="inline-flex items-center">
-                    {/* <img alt="blog" src="https://dummyimage.com/103x103" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
-                    <span class="flex-grow flex flex-col pl-3">
+                  {/* <img alt="blog" src="https://dummyimage.com/103x103" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
+                  <span class="flex-grow flex flex-col pl-3">
                       <span class="title-font font-medium text-gray-900">
                         John Webster
                       </span>
                     </span>
-                  </a>
                 </div>
               </div>
             </div>
@@ -69,14 +69,11 @@ export default function Home() {
                     A business ROI calculation details the general indicators of
                     success associated with future ventures.
                   </p>
-                  <a class="inline-flex items-center">
-                    {/* <img alt="blog" src="https://dummyimage.com/102x102" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
-                    <span class="flex-grow flex flex-col pl-3">
-                      <span class="title-font font-medium text-gray-900">
+                  <span className="flex-grow flex flex-col pl-3">
+                      <span className="title-font font-medium text-gray-900">
                         Dom Fernando
                       </span>
                     </span>
-                  </a>
                 </div>
               </div>
             </div>
@@ -102,14 +99,11 @@ export default function Home() {
                     automated sensors and forklifts allow for more efficient
                     processes.
                   </p>
-                  <a class="inline-flex items-center">
-                    {/* <img alt="blog" src="https://dummyimage.com/101x101" class="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"/> */}
-                    <span class="flex-grow flex flex-col pl-3">
-                      <span class="title-font font-medium text-gray-900">
+                  <span className="flex-grow flex flex-col pl-3">
+                      <span className="title-font font-medium text-gray-900">
                         Nick Hulston
                       </span>
                     </span>
-                  </a>
                 </div>
               </div>
             </div>
@@ -156,7 +150,7 @@ export default function Home() {
                   will output your possible ROI with the implementation of RFID
                   sensors and Bar IQ technologies.
                 </p>
-                <a
+                <Link
                   class="mt-3 text-indigo-500 inline-flex items-center"
                   href="/roi"
                 >
@@ -172,7 +166,7 @@ export default function Home() {
                   >
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div class="p-4 md:w-1/3 flex">
@@ -198,7 +192,7 @@ export default function Home() {
                   the technologies that Bar IQ offers. The Search Engine gives
                   access to all different forms of helpful resources.
                 </p>
-                <a
+                <Link
                   class="mt-3 text-indigo-500 inline-flex items-center"
                   href="/help"
                 >
@@ -214,7 +208,7 @@ export default function Home() {
                   >
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div class="p-4 md:w-1/3 flex">
@@ -240,7 +234,7 @@ export default function Home() {
                   Informational statements and helpful examples or different
                   usage strategies for beer warehousing.
                 </p>
-                <a class="mt-3 text-indigo-500 inline-flex items-center">
+                <Link class="mt-3 text-indigo-500 inline-flex items-center" href="/modules">
                   Learn More
                   <svg
                     fill="none"
@@ -253,7 +247,7 @@ export default function Home() {
                   >
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

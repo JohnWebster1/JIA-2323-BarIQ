@@ -99,7 +99,7 @@ const FullModule = styled(VideoTitle)`
   text-decoration: underline;
 `;
 
-export default function modules() {
+export default function Modules() {
   // Navigation
   const router = useRouter();
   const [sectionsCSS, setSectionsCSS] = useState([]);
@@ -145,7 +145,7 @@ export default function modules() {
       }
       setSectionsCSS(newSectionsCSS);
     });
-  }, []);
+  }, [router]);
 
   // Authentication
   initFirebase();
