@@ -43,7 +43,7 @@ function LeftSection() {
                     href="/login"
                 >
                     <Image
-                        src={"/../public/logo.png"}
+                        src={"/logo.png"}
                         alt="Picture of the logo"
                         layout="fill"
                         objectFit="contain"
@@ -53,7 +53,7 @@ function LeftSection() {
             <Left>
                 <ImageWrapper>
                     <Image
-                        src={"/../public/warehouse.png"}
+                        src={"/warehouse.png"}
                         alt="Picture of the warehouse"
                         layout="fill"
                         objectFit="contain"

@@ -53,7 +53,7 @@ export default function Login() {
             <Head>
                 <title>Bar IQ | Log In</title>
                 <meta name="description" content="Bar IQ is a warehouse management software for beer warehouses."/>
-                <link rel="icon" href="../public/favicon.ico"/>
+                <link rel="icon" href="/favicon.ico"/>
             </Head>
 
             <LeftSection/>

@@ -126,7 +126,7 @@ function RightSection(props) {
                     href="/"
                 >
                     <Image
-                        src={"/../public/logo.png"}
+                        src={"/logo.png"}
                         alt="Picture of the logo"
                         layout="fill"
                         objectFit="contain"

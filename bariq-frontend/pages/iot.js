@@ -65,7 +65,7 @@ export default function ROI() {
       <Head>
         <title>Bar IQ | My IoT</title>
         <meta name="description" content="The IoT page for Bar IQ." />
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Wrapper>

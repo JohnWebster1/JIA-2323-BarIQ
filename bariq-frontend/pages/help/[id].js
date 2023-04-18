@@ -56,7 +56,7 @@ export default function Index() {
         <Head>
             <title>Bar IQ | Help</title>
             <meta name="description" content="The help page for Bar IQ."/>
-            <link rel="icon" href="../public/favicon.ico"/>
+            <link rel="icon" href="/favicon.ico"/>
         </Head>
 
         <Navbar loggedIn={user} logout={logout}/>

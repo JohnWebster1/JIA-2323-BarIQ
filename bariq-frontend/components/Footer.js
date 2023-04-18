@@ -66,7 +66,7 @@ function Footer() {
         <ImageWrapper>
           <a href="/">
             <Image
-              src={"/../public/logo.png"}
+              src={"/logo.png"}
               alt="hi"
               layout="fill"
               objectFit="contain"

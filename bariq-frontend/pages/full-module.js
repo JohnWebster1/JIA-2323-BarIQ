@@ -118,7 +118,7 @@ export default function modules() {
             <Head>
                 <title>Bar IQ | Video Modules</title>
                 <meta name="description" content="The Video Modules page for Bar IQ."/>
-                <link rel="icon" href="../public/favicon.ico"/>
+                <link rel="icon" href="/favicon.ico"/>
             </Head>
 
             <Wrapper>

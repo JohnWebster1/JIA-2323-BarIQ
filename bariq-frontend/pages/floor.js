@@ -68,7 +68,7 @@ export default function ROI() {
           name="description"
           content="The Floor Plan Generator for Bar IQ."
         />
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Wrapper>

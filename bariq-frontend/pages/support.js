@@ -65,7 +65,7 @@ export default function ROI() {
       <Head>
         <title>Bar IQ | Support Desk</title>
         <meta name="description" content="The Support Desk for Bar IQ." />
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Wrapper>

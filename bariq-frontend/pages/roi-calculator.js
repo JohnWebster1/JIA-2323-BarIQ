@@ -68,7 +68,7 @@ export default function RoiCalculator() {
       <Head>
         <title>Bar IQ | ROI Calculator</title>
         <meta name="description" content="The ROI calculator for Bar IQ." />
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Wrapper>
