@@ -9,14 +9,16 @@ const Container = styled.div`
   width: 100%;
 `;
 const Title = styled.h1`
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 700;
-  color: #1b41F2;
+  color: #1b93d2;
   line-height: 1.2;
   text-align: center;
   margin: 0;
-  padding: 2rem 1rem;
-  background-image: radial-gradient(circle at 30% 107%, #c5d5e5, #e7edf2 80%);
+  border-radius: 2px;
+  border-color: black;
+  padding: 3rem 1rem 4rem;
+  // background-image:linear-gradient(180deg, rgba(19,47,67,1) 0%, rgba(74,96,113,1) 0%, rgba(111,130,143,1) 1%, rgba(123,141,153,1) 4%, rgba(138,154,165,1) 13%, rgba(168,181,190,1) 34%, rgba(231,237,242,1) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   text-transform: uppercase;

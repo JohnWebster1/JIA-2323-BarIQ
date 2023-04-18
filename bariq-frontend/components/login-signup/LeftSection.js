@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 
 const Left = styled.div`
   position: absolute;
@@ -39,7 +40,7 @@ function LeftSection() {
     return (
         <Wrapper>
             <LogoWrapper>
-                <a
+                <Link
                     href="/login"
                 >
                     <Image
@@ -48,7 +49,7 @@ function LeftSection() {
                         layout="fill"
                         objectFit="contain"
                     />
-                </a>
+                </Link>
             </LogoWrapper>
             <Left>
                 <ImageWrapper>

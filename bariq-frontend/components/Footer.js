@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link";
 
 const FooterWrapper = styled.footer`
   background: #132f43;
@@ -33,7 +34,7 @@ const SectionTitle = styled.h2`
   color: #1b93d2;
 `;
 
-const Link = styled.a`
+const LinkComponent = styled(Link)`
   font-size: 1.05rem;
   cursor: pointer;
   display: inline-block;
@@ -64,39 +65,39 @@ function Footer() {
     <FooterWrapper>
       <LinkRows>
         <ImageWrapper>
-          <a href="/">
+          <Link href="/">
             <Image
               src={"/logo.png"}
               alt="hi"
               layout="fill"
               objectFit="contain"
             />
-          </a>
+          </Link>
         </ImageWrapper>
         <Column>
           <SectionTitle>SOLUTIONS</SectionTitle>
-          <Link>Search Engine</Link>
-          <Link>Online FAQs</Link>
-          <Link>Video Modules</Link>
+          <LinkComponent href="">Search Engine</LinkComponent>
+          <LinkComponent href="">Online FAQs</LinkComponent>
+          <LinkComponent href="">Video Modules</LinkComponent>
         </Column>
         <Column>
           <SectionTitle>RESOURCES</SectionTitle>
-          <Link>My IoT</Link>
-          <Link>Documentations</Link>
-          <Link>Community</Link>
+          <LinkComponent href="">My IoT</LinkComponent>
+          <LinkComponent href="">Documentations</LinkComponent>
+          <LinkComponent href="">Community</LinkComponent>
         </Column>
         <Column>
           <SectionTitle>COMPANY</SectionTitle>
-          <Link>About Us</Link>
-          <Link>Blog</Link>
-          <Link>Partnerships</Link>
-          <Link>Careers</Link>
+          <LinkComponent href="">About Us</LinkComponent>
+          <LinkComponent href="">Blog</LinkComponent>
+          <LinkComponent href="">Partnerships</LinkComponent>
+          <LinkComponent href="">Careers</LinkComponent>
         </Column>
         <Column>
           <SectionTitle>DEVELOPERS</SectionTitle>
-          <Link>Forums</Link>
-          <Link>Projects</Link>
-          <Link>Open Source</Link>
+          <LinkComponent href="">Forums</LinkComponent>
+          <LinkComponent href="">Projects</LinkComponent>
+          <LinkComponent href="">Open Source</LinkComponent>
         </Column>
       </LinkRows>
 

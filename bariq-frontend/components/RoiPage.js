@@ -7,7 +7,7 @@ const Heading = styled.h1`
   font-size: 23px;
   height: 60px;
   font-weight: bold;
-  color: #1b93d2;
+  color: #305f82;
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 0;
@@ -26,7 +26,7 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  background: #FAF9F6;
+  background: #c9d8e2;
   padding: 10px;
   border: 2px solid;
   border-radius: 10px;
@@ -42,7 +42,7 @@ const Link = styled.a`
   text-decoration: none;
   color: black;
   &:hover {
-    color: #1b93d2;
+    font-size: 1.1rem;
   }
 `;
 
@@ -76,7 +76,7 @@ function RoiPage() {
         <p>Our ROI calculator takes into account 20+ unique factors to <br/>determine your estimated ROI when becoming a Bar IQ customer!<br/>It will consider your current expenses, profits, and warehouse size. </p>
         <LinkRows>     
             <Column>
-                <Link>• Percentage of product "mispicks"</Link>
+                <Link>• Percentage of product &quot;mispicks&quot;</Link>
                 <Link>• Warehouse square footage</Link>
                 <Link>• Volume of product fulfillment by item</Link>
                 <Link>• Number of forklifts</Link>

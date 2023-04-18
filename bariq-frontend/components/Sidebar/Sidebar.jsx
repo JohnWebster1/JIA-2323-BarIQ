@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import Link from "next/link";
 import classNames from "classnames";
 import {
   ArticleIcon,
@@ -21,7 +22,6 @@ import {
   SupportIcon,
 } from "../sidebar-icons";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -111,14 +111,14 @@ const Sidebar = () => {
           <div className="flex-none w-12 h-12 items-center pl-1">
             {(!toggleCollapse || !isCollapsible) && (
               <LogoWrapper>
-                <a href="/">
+                <Link href="/">
                   <Image
                     src={"/logo.png"}
                     alt="Picture of the logo"
                     layout="fill"
                     objectFit="contain"
                   />
-                </a>
+                </Link>
               </LogoWrapper>
             )}
           </div>
@@ -138,12 +138,12 @@ const Sidebar = () => {
         </div>
 
         <div className="flex flex-col items-start mt-8">
-          {menuItems.map(({ icon: Icon, ...menu }) => {
+          {menuItems.map(({ icon: Icon, ...menu }, index) => {
             const classes = getNavItemClasses(menu);
             return (
-              <div className={classes}>
+              <div className={classes} key={index}>
                 <Link href={menu.link} legacyBehavior>
-                  <a className="flex py-3 px-4 items-center w-full h-full ">
+                  <div className="flex py-3 px-4 items-center w-full h-full ">
                     <div style={{ width: "3rem" }}>
                       <Icon />
                     </div>
@@ -154,7 +154,7 @@ const Sidebar = () => {
                         {menu.label}
                       </span>
                     )}
-                  </a>
+                  </div>
                 </Link>
               </div>
             );

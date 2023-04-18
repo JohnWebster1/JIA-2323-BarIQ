@@ -27,8 +27,8 @@ const Container2 = styled.div`
 const Title = styled.h1`
   background: #e7edf2;
   text-align: center;
-  font-size: 30px;
-  height: 60px;
+  font-size: 35px;
+  height: 90px;
   width: 100vw;
   padding-top: 20px;
   font-weight: bold;

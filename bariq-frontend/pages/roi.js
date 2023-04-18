@@ -23,12 +23,13 @@ const Container = styled.div`
 const Container2 = styled.div`
   background: #e7edf2;
   width: auto;
+  padding: 10px;
 `;
 
 const Title = styled.h1`
   background: #e7edf2;
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
   height: 60px;
   width: 100%;
   padding-top: 20px;
