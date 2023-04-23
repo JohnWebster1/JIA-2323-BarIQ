@@ -41,7 +41,7 @@ function LeftSection() {
         <Wrapper>
             <LogoWrapper>
                 <Link
-                    href="/login"
+                    href="/"
                 >
                     <Image
                         src={"/logo.png"}
