@@ -8,7 +8,7 @@ function contentBullet(props) {
     }
     return (
         <div style={bulletStyles}>
-            <img src="/contentIcon.png"/>
+            <img src="/contentIcon.png" alt={'content icon'}/>
             <h4 style ={{marginTop:'12px', marginBottom:"-5px"}}>{props.title}</h4>
             <p style = {{fontSize:"13px", color:"#697386"}}>{props.description}</p>
         </div>

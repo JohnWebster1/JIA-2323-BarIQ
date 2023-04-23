@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function InfoIcon({ fill = "#6C7281", ...rest }) {
+function InfoIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

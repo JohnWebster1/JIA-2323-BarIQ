@@ -26,11 +26,8 @@ export default function Login() {
             initFirebase();
             const auth = getAuth();
             signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in
-                    const user = userCredential.user;
+                .then(() => {
                     router.push("/")
-                    // ...
                 })
                 .catch((error) => {
                     // const errorCode = error.code;

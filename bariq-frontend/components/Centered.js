@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: white:
+    background: white;
 `;
 
 function Centered(props) {

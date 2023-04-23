@@ -6,7 +6,7 @@ import "./App.css"
 import RoiForm from "./components/RoiForm";
 import RoiContent from "./components/RoiContent"
 
-function App(props) {
+function App() {
     const RoiWindowStyles = {
         display:"flex",
         alignItems: "center",
