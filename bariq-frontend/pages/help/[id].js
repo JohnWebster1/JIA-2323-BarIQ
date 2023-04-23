@@ -46,7 +46,7 @@ export default function Index() {
     const logout = () => {
         auth.signOut().then(() => {
             if (!user) {
-                router.push("/")
+                router.push("/");
             }
         });
     }

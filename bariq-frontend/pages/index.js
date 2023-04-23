@@ -20,7 +20,7 @@ export default function Home() {
 
     const logout = () => {
         console.log("Logging out...")
-        auth.signOut().then(r => {
+        auth.signOut().then(() => {
             if (!user) {
                 router.push("/")
             }

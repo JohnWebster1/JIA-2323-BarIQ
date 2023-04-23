@@ -127,7 +127,7 @@ function ArticleComponent(props) {
     let categories = []
     categoriesMap.forEach((value, key) => {
         categories.push(<FilterItem key={key}>
-            <input type="checkbox" id={key} name={value} value={value} onChange={(event) => {
+            <input type="checkbox" id={key.toString()} name={value.toString()} value={value.toString()} onChange={(event) => {
                 const newSet = new Set(selectedCategories);
                 if (event.target.checked) {
                     newSet.add(parseInt(event.target.id));

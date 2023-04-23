@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function CollapsIcon({ fill = "#6C7281", ...rest }) {
+function CollapseIcon({ fill = "#6C7281", ...rest }) {
   return (
     <svg
       width={16}
@@ -22,4 +22,4 @@ function CollapsIcon({ fill = "#6C7281", ...rest }) {
   );
 }
 
-export default CollapsIcon;
+export default CollapseIcon;

@@ -3,7 +3,7 @@ import Link from "next/link";
 import classNames from "classnames";
 import {
   ArticleIcon,
-  CollapsIcon,
+  CollapseIcon,
   HomeIcon,
   UsersIcon,
   VideosIcon,
@@ -50,12 +50,10 @@ const Sidebar = () => {
   const [isCollapsible, setIsCollapsible] = useState(false);
 
   const router = useRouter();
-
-  const activeMenu = useMemo(
-    () => menuItems.find((menu) => menu.link === router.pathname),
-    [router.pathname]
+  useMemo(
+      () => menuItems.find((menu) => menu.link === router.pathname),
+      [router.pathname]
   );
-
   const wrapperClasses = classNames(
     "px-4 pt-8 pb-4 bg- flex justify-between flex-col",
     {
@@ -71,7 +69,7 @@ const Sidebar = () => {
     }
   );
 
-  const getNavItemClasses = (menu) => {
+  const getNavItemClasses = () => {
     return classNames(
       "flex items-center cursor-pointer hover:bg-light-lighter rounded w-full overflow-hidden whitespace-nowrap bg-light-lighter"
     );
@@ -132,14 +130,14 @@ const Sidebar = () => {
               className={collapseIconClasses}
               onClick={handleSidebarToggle}
             >
-              <CollapsIcon />
+              <CollapseIcon />
             </button>
           )}
         </div>
 
         <div className="flex flex-col items-start mt-8">
           {menuItems.map(({ icon: Icon, ...menu }, index) => {
-            const classes = getNavItemClasses(menu);
+            const classes = getNavItemClasses();
             return (
               <div className={classes} key={index}>
                 <Link href={menu.link} legacyBehavior>

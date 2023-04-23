@@ -1,10 +1,8 @@
 ## Team 2323 Bar IQ
 
-Team 2323 is tasked with creating an Interactive Resource Portal for new and existing customers using Bar IQ technologies. Specifically, we are looking to make an interactive layout builder that implements RFID technology into beer warehouses, an ROI calculator for beer warehouse mangers, and a multi-purpose Search Engine page for users of the IRP.
+Team 2323 is tasked with creating an Interactive Resource Portal for new and existing customers using Bar IQ technologies. Specifically, we are looking to make an interactive layout builder that implements RFID technology into beer warehouses, an ROI calculator for beer warehouse mangers, and a multipurpose Search Engine page for users of the IRP.
 
 We are working with Daniel Knotts, CTO of Bar IQ, LLC. 
-
-[Licences under GNUv3 ](LICENSE.md)
 
 ## Installation Instructions
 1. Clone the repository to your local machine using `git clone https://github.com/JohnWebster1/JIA-2323-BarIQ.git`
@@ -57,7 +55,7 @@ N/A
 ### Version 0.3.0
 #### New Features
 * The Bar IQ ROI Calculator is now functional with an info and calculator page.
-* The ROI calculator page has 20+ input fields which Bar IQs ROI algorithm will run on once implmented.
+* The ROI calculator page has 20+ input fields which Bar IQs ROI algorithm will run on once implemented.
 * The Search Engine page now has a UI panel with clickable checkboxes for the different filter categories.
 
 #### Bug Fixes
@@ -89,8 +87,8 @@ N/A
 ### Version 0.1.0
 
 #### New Features
-* The Bar IQ Interactive Resource Portal now has a login screen with built in authentication so customers can save their account information and personalize their Bar IQ experience.
-* The Bar IQ Navigation Bar is up to date with ROI, Layout Builder, and FAQ pages. 
+* The Bar IQ Interactive Resource Portal now has a login screen with built-in authentication so customers can save their account information and personalize their Bar IQ experience.
+* The Bar IQ Navigation Bar is up-to-date with ROI, Layout Builder, and FAQ pages. 
 
 #### Bug Fixes
 N/A

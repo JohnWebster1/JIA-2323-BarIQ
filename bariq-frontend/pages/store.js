@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
 import { initFirebase } from "../util/firebaseApp";
 import { getAuth } from "firebase/auth";
 import { useRouter } from "next/router";

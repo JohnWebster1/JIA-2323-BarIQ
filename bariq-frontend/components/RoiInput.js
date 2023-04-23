@@ -4,8 +4,6 @@ import Modal from "react-modal";
 import Centered from "./Centered";
 import {saveRoiFields} from "../util/firebaseRoi";
 
-Modal.setAppElement("#__next");
-
 const StyledInput = styled.input`
   width: 100%;
   padding: 6px 10px;
@@ -60,14 +58,14 @@ const inputNames1 = [
   "Average compensation of warehouse workers ($)",
   "Number of total warehouse workers hours per month",
   "Average hours for product fulfillment ",
-  "Percentage of order inaccuraces delivered to customers (0-100)",
+  "Percentage of order inaccuracies delivered to customers (0-100)",
   "Total sales for canned/bottled goods ($)",
   "Number of dock doors",
   "Percentage of duplicates delivered to the customer (0-100)",
 ];
 const inputNames2 = [
   "Average sales price of craft beer product",
-  "Average sales price of high volume prduct",
+  "Average sales price of high volume product",
   "Warehouse square footage",
   "Number of delivery transportation vehicles",
   "Number of sales representatives",
@@ -82,7 +80,7 @@ const inputNames3 = [
   "Number of handheld barcode scanners in warehouse",
   "Number of warehouses lost over last 3 years",
   "Number of current label printers in warehouse",
-  "Number of current labels purchaed annually",
+  "Number of current labels purchased annually",
   "Number of interactive forklifts",
 ]
 

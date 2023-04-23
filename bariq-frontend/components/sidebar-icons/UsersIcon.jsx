@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function UsersIcon({ stroke = "#6C7281", ...rest }) {
+function UsersIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -33,15 +33,14 @@ export default function Signup() {
             initFirebase();
             const auth = getAuth();
             createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
+                .then(() => {
                     // Signed in
-                    const user = userCredential.user;
                     updateProfile(auth.currentUser, {
                         displayName: name
-                    }).then(r => {
+                    }).then(() => {
                         // Profile updated
                         router.push("/")
-                    }).catch((error) => {
+                    }).catch(() => {
                         router.push("/")
                     })
                     // ...
