@@ -6,6 +6,29 @@ We are working with Daniel Knotts, CTO of Bar IQ, LLC.
 
 [Licences under GNUv3 ](LICENSE.md)
 
+## Installation Instructions
+1. Clone the repository to your local machine using `git clone https://github.com/JohnWebster1/JIA-2323-BarIQ.git`
+2. Install Node.js and npm if you do not already have them installed.
+3. `cd` into the correct folder using `cd JIA-2323-BarIQ/bariq-frontend`
+4. Run `npm install` to install all dependencies.
+5. Run `npm run dev` to start the development server on your local machine when changes need to be made to the code.
+6. Commit and push your changes to the GitHub repository.
+
+## Deployment Instructions
+1. **Option 1**: Use a custom Linux server to host the website
+    1. Install Node.js and npm on the Linux server if you do not already have them installed.
+    2. `cd` into the correct folder using `cd JIA-2323-BarIQ/bariq-frontend`
+    3. Run `npm install` to install all dependencies.
+    4. Run `npm run build` to build the project.
+    5. Run `npm run start` to start the production server on the Linux server.
+   6. Customize your domain name to point to the Linux server's IP address
+   7. Updates to the code will require you to rebuild the project and restart the production server.
+2. **Option 2**: Use a free platform such as Vercel to host the website
+    1. Create a Vercel account and link it to your GitHub account.
+   2. Create a Vercel new project and link it to the GitHub repository you cloned earlier.
+   3. Customize your domain name to point to the Vercel server's IP address (follow Vercel's instructions)
+   4. Updates to the code will automatically be deployed to the Vercel server.
+
 ## Release Notes
 
 ### Version 0.5.0: Next Release
