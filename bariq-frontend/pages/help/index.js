@@ -14,12 +14,12 @@ import styled from "styled-components";
 import Footer from "../../components/Footer";
 
 const Container = styled.div`
-  background:  #E7EDF2;
+  background:  white;
   width: 100%;
 `;
 
 const Title = styled.h1`
-background: #e7edf2;
+background: white;
 text-align: center;
 font-size: 35px;
 height: 60px;
@@ -27,7 +27,7 @@ width: 100%;
 padding-top: 20px;
 padding-bottom: 90px;
 font-weight: bold;
-color: #1b93d2;
+color: black;
 `;
 const Wrapper = styled.div`
   display: flex;

@@ -10,10 +10,9 @@ import { useRouter } from 'next/router';
 import Article from "../../components/Articles/Article";
 import styled from "styled-components";
 import Footer from "../../components/Footer";
-import Sidebar from "../../components/Sidebar/Sidebar";
 
 const Wrapper = styled.div`
-    background: #E7EDF2;
+    background: white;
 `;
 
 export default function Index() {

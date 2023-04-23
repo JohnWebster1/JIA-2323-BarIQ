@@ -17,7 +17,7 @@ import { useEffect, useState } from "react";
 import { PlayIcon } from "../components/sidebar-icons";
 
 const Container = styled.div`
-  background: #e7edf2;
+  background: white;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -25,14 +25,14 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  background: #e7edf2;
+  background: white;
   text-align: center;
   font-size: 35px;
   height: 60px;
   width: 100%;
   padding-top: 20px;
   font-weight: bold;
-  color: #1b93d2;
+  color: black;
   margin-bottom: 30px;
 `;
 

@@ -13,7 +13,7 @@ import styled from "styled-components";
 import Footer from "../components/Footer";
 
 const Container = styled.div`
-  background: #e7edf2;
+  background: white;
   margin: 0 auto;
   width: 100%;
 `;
@@ -44,14 +44,14 @@ const VideoTitle = styled.h2`
 `;
 
 const Title = styled.h1`
-  background: #e7edf2;
+  background: white;
   text-align: center;
   font-size: 30px;
   height: 60px;
   width: 100%;
   padding-top: 20px;
   font-weight: bold;
-  color: #1b93d2;
+  color: black;
 `;
 const Wrapper = styled.div`
   display: flex;

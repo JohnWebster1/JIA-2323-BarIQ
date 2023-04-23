@@ -10,13 +10,11 @@ const ArticleList = styled.ul`
 `;
 
 const ArticleItem = styled.li`
-  border: 1px solid #ccc;
   border-radius: 15px;
   margin: 10px;
   padding: 10px;
   cursor: pointer;
-  background: #c9d8e2;
-  opacity:0.8;
+  background: #e8e8e8;
 `;
 
 const ArticleTitle = styled.h2`
@@ -50,7 +48,7 @@ const Wrapper = styled.div`
 const FilterWrapper = styled.div`
   font-size: 16px;
   margin-bottom: 10px;
-  background: #c9d8e2;
+  background: #e8e8e8;
   opacity: 0.85;
   padding: 20px;
   border-radius: 20px;

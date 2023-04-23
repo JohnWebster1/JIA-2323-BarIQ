@@ -15,33 +15,33 @@ import Footer from "../components/Footer";
 import RoiPage from "../components/RoiPage";
 
 const Container = styled.div`
-  background: #e7edf2;
+  background: white;
   margin: 0 auto;
   width: 100%;
 `;
 
 const Container2 = styled.div`
-  background: #e7edf2;
+  background: white;
   width: auto;
   padding: 10px;
 `;
 
 const Title = styled.h1`
-  background: #e7edf2;
+  background: white;
   text-align: center;
   font-size: 35px;
   height: 60px;
   width: 100%;
   padding-top: 20px;
   font-weight: bold;
-  color: #1b93d2;
+  color: black;
 `;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
 `;
 const RoiButton = styled.a`
-  color: #e7edf2;
+  color: white;
   background: #1a1d4a;
   font-size: 20px;
   padding: 5px 13px;
@@ -53,7 +53,7 @@ const RoiButton = styled.a`
 
   &:hover {
     background: #2a81e5;
-    color: #e7edf2;
+    color: white;
   }
 `;
 

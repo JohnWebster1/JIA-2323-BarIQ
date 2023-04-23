@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { initFirebase } from "../util/firebaseApp";
 import { getAuth } from "firebase/auth";
 import { useRouter } from "next/router";
@@ -9,30 +9,28 @@ import Centered from "../components/Centered";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 
-import Sidebar from "../components/Sidebar/Sidebar";
 import styled from "styled-components";
 import Footer from "../components/Footer";
-import RoiPage from "../components/RoiPage";
 import RoiInput from "../components/RoiInput";
 
 const Container = styled.div`
-  background: #e7edf2;
+  background: white;
 `;
 
 const Container2 = styled.div`
-  background: #e7edf2;
+  background: white;
   width: auto;
 `;
 
 const Title = styled.h1`
-  background: #e7edf2;
+  background: white;
   text-align: center;
   font-size: 35px;
   height: 90px;
   width: 100vw;
   padding-top: 20px;
   font-weight: bold;
-  color: #1b93d2;
+  color: black;
 `;
 const Wrapper = styled.div`
   display: flex;

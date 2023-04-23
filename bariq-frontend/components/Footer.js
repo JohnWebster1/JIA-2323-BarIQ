@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const FooterWrapper = styled.footer`
-  background: #132f43;
+  background: #202549;
   width: 100%;
 `;
 
@@ -31,7 +31,7 @@ const Column = styled.div`
 const SectionTitle = styled.h2`
   font-weight: bold;
   font-size: 1.2rem;
-  color: #1b93d2;
+  color: black;
 `;
 
 const LinkComponent = styled(Link)`

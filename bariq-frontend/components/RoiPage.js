@@ -3,7 +3,7 @@ import React from 'react'
 import styled from "styled-components";
 
 const Heading = styled.h1`
-  background:  #E7EDF2;
+  background:  white;
   font-size: 23px;
   height: 60px;
   font-weight: bold;
