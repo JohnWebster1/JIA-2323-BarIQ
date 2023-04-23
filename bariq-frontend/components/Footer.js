@@ -31,7 +31,7 @@ const Column = styled.div`
 const SectionTitle = styled.h2`
   font-weight: bold;
   font-size: 1.2rem;
-  color: black;
+  color: white;
 `;
 
 const LinkComponent = styled(Link)`
