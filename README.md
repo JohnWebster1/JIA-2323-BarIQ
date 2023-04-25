@@ -31,17 +31,18 @@ We are working with Daniel Knotts, CTO of Bar IQ, LLC.
 
 ### Version 0.5.0: Next Release
 #### New Features
-* TBD
-* TBD
+* Relevant Bar IQ videos and links are now published to the Video Modules page. 
+* UI theme of the IRP was revised one last time to match the theme of the old and incomplete Bar IQ website.
+* IRP is now deployed and hosted on Vercel App through GitHub repository.
 
 #### Bug Fixes
-* TBD
+* Fixed icons and Bar IQ images failing to appear when Interactive Resource portal application was deployed to the hosting platform Vercel.
 
 ---
 
 ### Version 0.4.0
 #### New Features
-* The Video Modules Page is now functional with drop down modules and associated YouTube videos.
+* The Video Modules Page is now functional with drop down modules and placeholder YouTube videos.
 * All icons now have a main page that can be iterated upon for the future.
 
 #### Bug Fixes
@@ -92,3 +93,6 @@ N/A
 
 #### Bug Fixes
 N/A
+
+## Additional Features
+* https://drive.google.com/file/d/17HeeNRy0Ro8cN5rEbBq5SzvbMyhxYAQy/view?usp=sharing
