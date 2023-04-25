@@ -29,7 +29,7 @@ We are working with Daniel Knotts, CTO of Bar IQ, LLC.
 
 ## Release Notes
 
-### Version 0.5.0: Next Release
+### Version 0.5.0
 #### New Features
 * Relevant Bar IQ videos and links are now published to the Video Modules page. 
 * UI theme of the IRP was revised one last time to match the theme of the old and incomplete Bar IQ website.
